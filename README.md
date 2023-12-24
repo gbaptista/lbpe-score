@@ -4,6 +4,8 @@ This repository contains the source code used to evaluate and generate results f
 
 You can read more about this in the article on Medium: [TODO](#)
 
+Detailed charts with results: https://gbaptista.github.io/lbpe-score/
+
 - [Setup](#setup)
 - [Usage](#usage)
     - [MMLU](#mmlu)
