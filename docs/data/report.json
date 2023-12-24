@@ -1,0 +1,348 @@
+{
+  "MMLU": {
+    "google/gemini-pro": {
+      "0": 18,
+      "1": 616,
+      "2": 0,
+      "3": 0,
+      "4": 0,
+      "5": 1126
+    },
+    "openai/gpt-3-5-turbo": {
+      "0": 0,
+      "1": 638,
+      "2": 0,
+      "3": 0,
+      "4": 0,
+      "5": 1122
+    },
+    "openai/gpt-4-turbo": {
+      "0": 0,
+      "1": 248,
+      "2": 0,
+      "3": 0,
+      "4": 0,
+      "5": 1512
+    }
+  },
+  "conversational-recall-1": {
+    "google/gemini-pro": {
+      "0": 1,
+      "1": 32,
+      "2": 14,
+      "3": 1,
+      "4": 2,
+      "5": 50
+    },
+    "openai/gpt-3-5-turbo": {
+      "0": 0,
+      "1": 8,
+      "2": 1,
+      "3": 0,
+      "4": 2,
+      "5": 89
+    },
+    "openai/gpt-4-turbo": {
+      "0": 0,
+      "1": 5,
+      "2": 4,
+      "3": 2,
+      "4": 4,
+      "5": 85
+    }
+  },
+  "conversational-recall-2": {
+    "google/gemini-pro": {
+      "0": 0,
+      "1": 18,
+      "2": 18,
+      "3": 4,
+      "4": 5,
+      "5": 55
+    },
+    "openai/gpt-3-5-turbo": {
+      "0": 0,
+      "1": 6,
+      "2": 7,
+      "3": 0,
+      "4": 1,
+      "5": 86
+    },
+    "openai/gpt-4-turbo": {
+      "0": 0,
+      "1": 6,
+      "2": 14,
+      "3": 3,
+      "4": 3,
+      "5": 74
+    }
+  },
+  "conversational-recall-3": {
+    "google/gemini-pro": {
+      "0": 1,
+      "1": 59,
+      "2": 20,
+      "3": 3,
+      "4": 3,
+      "5": 14
+    },
+    "openai/gpt-3-5-turbo": {
+      "0": 0,
+      "1": 9,
+      "2": 9,
+      "3": 1,
+      "4": 1,
+      "5": 80
+    },
+    "openai/gpt-4-turbo": {
+      "0": 0,
+      "1": 5,
+      "2": 5,
+      "3": 0,
+      "4": 1,
+      "5": 89
+    }
+  },
+  "conversational-recall-4": {
+    "google/gemini-pro": {
+      "0": 1,
+      "1": 47,
+      "2": 19,
+      "3": 4,
+      "4": 2,
+      "5": 27
+    },
+    "openai/gpt-3-5-turbo": {
+      "0": 0,
+      "1": 7,
+      "2": 5,
+      "3": 0,
+      "4": 0,
+      "5": 88
+    },
+    "openai/gpt-4-turbo": {
+      "0": 0,
+      "1": 7,
+      "2": 1,
+      "3": 0,
+      "4": 2,
+      "5": 90
+    }
+  },
+  "tools-1": {
+    "google/gemini-pro": {
+      "0": 0,
+      "1": 5,
+      "2": 28,
+      "3": 4,
+      "4": 0,
+      "5": 63
+    },
+    "openai/gpt-3-5-turbo": {
+      "0": 0,
+      "1": 6,
+      "2": 7,
+      "3": 5,
+      "4": 11,
+      "5": 71
+    },
+    "openai/gpt-4-turbo": {
+      "0": 0,
+      "1": 1,
+      "2": 6,
+      "3": 5,
+      "4": 8,
+      "5": 80
+    }
+  },
+  "tools-2": {
+    "google/gemini-pro": {
+      "0": 0,
+      "1": 7,
+      "2": 19,
+      "3": 7,
+      "4": 7,
+      "5": 60
+    },
+    "openai/gpt-3-5-turbo": {
+      "0": 0,
+      "1": 2,
+      "2": 10,
+      "3": 6,
+      "4": 6,
+      "5": 76
+    },
+    "openai/gpt-4-turbo": {
+      "0": 0,
+      "1": 1,
+      "2": 2,
+      "3": 4,
+      "4": 11,
+      "5": 82
+    }
+  },
+  "consolidated": {
+    "google/gemini-pro": {
+      "0": 21,
+      "1": 784,
+      "2": 118,
+      "3": 23,
+      "4": 19,
+      "5": 1395
+    },
+    "openai/gpt-3-5-turbo": {
+      "0": 0,
+      "1": 676,
+      "2": 39,
+      "3": 12,
+      "4": 21,
+      "5": 1612
+    },
+    "openai/gpt-4-turbo": {
+      "0": 0,
+      "1": 273,
+      "2": 32,
+      "3": 14,
+      "4": 29,
+      "5": 2012
+    }
+  },
+  "percentage": {
+    "MMLU": {
+      "google/gemini-pro": {
+        "failure": 634,
+        "success": 1126,
+        "percentage": 0.6397727272727273
+      },
+      "openai/gpt-3-5-turbo": {
+        "failure": 638,
+        "success": 1122,
+        "percentage": 0.6375
+      },
+      "openai/gpt-4-turbo": {
+        "failure": 248,
+        "success": 1512,
+        "percentage": 0.8590909090909091
+      }
+    },
+    "conversational-recall-1": {
+      "google/gemini-pro": {
+        "failure": 48,
+        "success": 52,
+        "percentage": 0.52
+      },
+      "openai/gpt-3-5-turbo": {
+        "failure": 9,
+        "success": 91,
+        "percentage": 0.91
+      },
+      "openai/gpt-4-turbo": {
+        "failure": 11,
+        "success": 89,
+        "percentage": 0.89
+      }
+    },
+    "conversational-recall-2": {
+      "google/gemini-pro": {
+        "failure": 40,
+        "success": 60,
+        "percentage": 0.6
+      },
+      "openai/gpt-3-5-turbo": {
+        "failure": 13,
+        "success": 87,
+        "percentage": 0.87
+      },
+      "openai/gpt-4-turbo": {
+        "failure": 23,
+        "success": 77,
+        "percentage": 0.77
+      }
+    },
+    "conversational-recall-3": {
+      "google/gemini-pro": {
+        "failure": 83,
+        "success": 17,
+        "percentage": 0.17
+      },
+      "openai/gpt-3-5-turbo": {
+        "failure": 19,
+        "success": 81,
+        "percentage": 0.81
+      },
+      "openai/gpt-4-turbo": {
+        "failure": 10,
+        "success": 90,
+        "percentage": 0.9
+      }
+    },
+    "conversational-recall-4": {
+      "google/gemini-pro": {
+        "failure": 71,
+        "success": 29,
+        "percentage": 0.29
+      },
+      "openai/gpt-3-5-turbo": {
+        "failure": 12,
+        "success": 88,
+        "percentage": 0.88
+      },
+      "openai/gpt-4-turbo": {
+        "failure": 8,
+        "success": 92,
+        "percentage": 0.92
+      }
+    },
+    "tools-1": {
+      "google/gemini-pro": {
+        "failure": 37,
+        "success": 63,
+        "percentage": 0.63
+      },
+      "openai/gpt-3-5-turbo": {
+        "failure": 18,
+        "success": 82,
+        "percentage": 0.82
+      },
+      "openai/gpt-4-turbo": {
+        "failure": 12,
+        "success": 88,
+        "percentage": 0.88
+      }
+    },
+    "tools-2": {
+      "google/gemini-pro": {
+        "failure": 33,
+        "success": 67,
+        "percentage": 0.67
+      },
+      "openai/gpt-3-5-turbo": {
+        "failure": 18,
+        "success": 82,
+        "percentage": 0.82
+      },
+      "openai/gpt-4-turbo": {
+        "failure": 7,
+        "success": 93,
+        "percentage": 0.93
+      }
+    },
+    "consolidated": {
+      "google/gemini-pro": {
+        "failure": 946,
+        "success": 1414,
+        "percentage": 0.5991525423728814
+      },
+      "openai/gpt-3-5-turbo": {
+        "failure": 727,
+        "success": 1633,
+        "percentage": 0.6919491525423729
+      },
+      "openai/gpt-4-turbo": {
+        "failure": 319,
+        "success": 2041,
+        "percentage": 0.8648305084745763
+      }
+    }
+  }
+}
