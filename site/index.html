@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>LBPE Score</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  </head>
+  <body>
+    <div class="container main-container">
+      <h1>LBPE Score</h1>
+
+      <div class="chart percentage">
+        <h2>Consolidated %</h2>
+        <canvas id="consolidated-percentage"></canvas>
+      </div>
+
+      <div class="chart">
+        <h2>Consolidated</h2>
+        <canvas id="consolidated"></canvas>
+      </div>
+
+      <div class="chart percentage">
+        <h2>MMLU %</h2>
+        <canvas id="MMLU-percentage"></canvas>
+      </div>
+
+      <div class="chart show">
+        <h2>MMLU</h2>
+        <canvas id="MMLU"></canvas>
+      </div>
+
+      <div class="chart percentage">
+        <h2>Short A %</h2>
+        <canvas id="conversational-recall-1-percentage"></canvas>
+      </div>
+
+      <div class="chart">
+        <h2>Short A</h2>
+        <canvas id="conversational-recall-1"></canvas>
+      </div>
+
+      <div class="chart percentage">
+        <h2>Short B %</h2>
+        <canvas id="conversational-recall-2-percentage"></canvas>
+      </div>
+
+      <div class="chart">
+        <h2>Short B</h2>
+        <canvas id="conversational-recall-2"></canvas>
+      </div>
+
+      <div class="chart percentage">
+        <h2>Long A %</h2>
+        <canvas id="conversational-recall-3-percentage"></canvas>
+      </div>
+
+      <div class="chart">
+        <h2>Long A</h2>
+        <canvas id="conversational-recall-3"></canvas>
+      </div>
+
+      <div class="chart percentage">
+        <h2>Long B %</h2>
+        <canvas id="conversational-recall-4-percentage"></canvas>
+      </div>
+
+      <div class="chart">
+        <h2>Long B</h2>
+        <canvas id="conversational-recall-4"></canvas>
+      </div>
+
+      <div class="chart percentage">
+        <h2>Direct Math %</h2>
+        <canvas id="tools-1-percentage"></canvas>
+      </div>
+
+      <div class="chart">
+        <h2>Direct Math</h2>
+        <canvas id="tools-1"></canvas>
+      </div>
+
+      <div class="chart percentage">
+        <h2>Inference Math %</h2>
+        <canvas id="tools-2-percentage"></canvas>
+      </div>
+
+      <div class="chart">
+        <h2>Inference Math</h2>
+        <canvas id="tools-2"></canvas>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <script src="global.js?cache=1"></script>
+
+    <style>
+      .main-container {
+        margin-top: 2em;
+        margin-bottom: 2em;
+      }
+
+      h2 {
+        margin-top: 1em;
+        margin-bottom: 2em;
+      }
+
+      .chart {
+        margin:4em 0;
+      }
+
+      /*.chart {
+        display: none;
+      }*/
+
+      .chart.percentage, .show {
+        display: block;
+      }
+
+      .percentage {
+        height: 15em;
+        margin-bottom: 10em;
+      }
+    </style>
+  </body>
+</html>

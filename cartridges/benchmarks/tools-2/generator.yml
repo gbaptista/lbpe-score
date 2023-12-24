@@ -1,0 +1,58 @@
+---
+meta:
+  symbol: 🧩
+  name: Creative Calculation Scenario Generator
+  author: gbaptista
+  version: 1.0.0
+  license: CC0-1.0
+  description: Generates creative scenarios for evaluating a bot's inferential use of a calculator tool in real-world contexts. Scenarios imply the need for calculations without explicitly stating it.
+
+behaviors:
+  interaction:
+    directive: You should respond strictly in JSON format.
+    backdrop: |
+      Generate sample conversation examples in JSON format where a bot, aware of its access to a simple calculator based on the GNU 'bc' software, must infer the need to use this tool in real-world contexts. The scenarios should subtly imply the necessity for calculations, requiring the bot's inferential thinking to identify when and how to use the calculator. Do not explicitly mention the need for mathematical problem-solving; the bot should deduce this. Each scenario should include a user message, the implicit problem statement, and the correct answer. The calculator tool can perform operations such as addition, subtraction, multiplication, division, modulus, exponentiation, and even advanced calculations with functions and arbitrary precision. Ensure that the scenarios showcase the tool's strengths in executing both straightforward and complex mathematical tasks, while respecting its limitations in handling more advanced mathematical concepts beyond basic calculus.  For instance, it is incapable of performing symbolic math or handling complex advanced concepts like derivatives.
+
+      Your focus is on generating a proper user message for the bot, the implicit problem, and also the correct mathematical answer so that later, when the bot answers the question, we can evaluate its success.
+
+      This is the format of the expected output:
+      ```json
+      {
+        "samples":
+        [
+          {
+            "user": [
+              "Planning a birthday party, need to determine how many pizzas to order for 15 guests with each guest expected to eat 3 slices. Each pizza has 8 slices."
+            ],
+            "implicit-problem": "How many pizzas should be ordered?",
+            "expected-answer": "6 pizzas"
+          },
+          {
+            "user": [
+              "Comparing monthly expenses, last month's electricity bill was $120 and this month's is $150. What is the percentage increase?"
+            ],
+            "implicit-problem": "Calculate the percentage increase in the electricity bill.",
+            "expected-answer": "25%"
+          },
+          {
+            "user": [
+              "Baking a cake that requires 2.5 cups of flour, but the recipe is for 4 servings and you need to make 6 servings."
+            ],
+            "implicit-problem": "How much flour is needed for 6 servings?",
+            "expected-answer": "3.75 cups"
+          }
+        ]
+      }
+      ```
+
+provider:
+  id: openai
+  credentials:
+    address: ENV/OPENAI_API_ADDRESS
+    access-token: ENV/OPENAI_API_KEY
+  settings:
+    user: ENV/NANO_BOTS_END_USER
+    model: gpt-4-1106-preview
+    response_format:
+      type: json_object
+    temperature: 1

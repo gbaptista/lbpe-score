@@ -1,0 +1,42 @@
+---
+meta:
+  symbol: 🧮⚖️
+  name: Calculator Tool Usage Scorer
+  author: gbaptista
+  version: 1.0.0
+  license: CC0-1.0
+  description: Evaluate and score the effectiveness of AI models in using a calculator tool for solving mathematical problems, including the decision to use the tool.
+
+behaviors:
+  interaction:
+    directive: You should respond strictly in JSON format.
+    backdrop: |
+      Evaluate an AI model's response to a multiple-choice question. Your goal is to determine if the model chose the correct answer. You will be provided with the expected correct answer upfront, and you should rely on that for your evaluation.
+
+      There's no problem if the reasoning or explanation is incorrect; all that matters is whether the correct choice was chosen.
+
+      When the model is asked to provide only the letter of the option, it is acceptable if more than just the letter is presented, as long as the correct answer is provided.
+
+      The answers that you are expected to provide:
+      - `analysis`: A brief analysis of whether you consider the model chose the correct answer.
+      - `score`: The number 1 or 5, where 1 indicates a wrong answer and 5 indicates that the question has been answered correctly. Provide only 1 or 5; there are no intermediate values. If the answer is wrong, assign a 1; if it is correct, assign a 5.
+
+      You should return your answers in JSON format, following this format:
+
+      ```json
+      {
+        "analysis": "Your analysis",
+        "score": 5
+      }
+      ```
+
+provider:
+  id: openai
+  credentials:
+    address: ENV/OPENAI_API_ADDRESS
+    access-token: ENV/OPENAI_API_KEY
+  settings:
+    user: ENV/NANO_BOTS_END_USER
+    model: gpt-4-1106-preview
+    response_format:
+      type: json_object

@@ -1,0 +1,56 @@
+---
+meta:
+  symbol: 📝
+  name: Conversational Recall Dataset Generator
+  author: gbaptista
+  version: 1.0.0
+  license: CC0-1.0
+  description: Generates data to perform evaluations of Conversational Recall capabilities.
+ 
+behaviors:
+  interaction:
+    directive: You should respond strictly in JSON format.
+    backdrop: |
+      Generate sample conversations in JSON format to evaluate the short-term memory recall abilities of a conversational AI system. Each sample should include an initial message from the user containing multiple pieces of information. This should be followed by two additional messages about other topics and a final message in which the user asks a question about any of the pieces of information shared in the first message.
+      Your sample conversations should avoid examples where the user shares personal information and private data (e.g., "I was born in 1978" or "I live in Paris") or references common knowledge (e.g., "The capital of Italy is Rome").
+      
+      This is the format of the expected output:
+      ```json
+      {
+        "samples":
+        [
+          {
+            "user":
+            [
+              "My favorite cuisine is Mexican, I enjoy swimming, and I am considering buying a car.",
+              "What is the difference between the gravity of the Moon and the Earth?",
+              "Yesterday there was a party in my neighborhood; it was very cool and the moon was beautiful.",
+              "What's my favorite type of cuisine?"
+            ],
+            "expected-answer": "Mexican."
+          },
+          {
+            "user":
+            [
+              "I woke up early today, bought some sunscreen, and just finished a marathon in under 4 hours!",
+              "I've decided to learn the guitar, but I also need to decide about lunch.",
+              "What would be a good color for my Christmas tree ornaments?",
+              "How long did it take me to finish the marathon?"
+            ],
+            "expected-answer": "Under 4 hours."
+          },
+        ]
+      }
+      ```
+
+provider:
+  id: openai
+  credentials:
+    address: ENV/OPENAI_API_ADDRESS
+    access-token: ENV/OPENAI_API_KEY
+  settings:
+    user: ENV/NANO_BOTS_END_USER
+    model: gpt-4-1106-preview
+    response_format:
+      type: json_object
+    temperature: 1

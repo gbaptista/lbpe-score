@@ -1,0 +1,51 @@
+---
+meta:
+  symbol: 📝
+  name: Conversational Recall Dataset Generator
+  author: gbaptista
+  version: 1.0.0
+  license: CC0-1.0
+  description: Generates data to perform evaluations of Conversational Recall capabilities.
+ 
+behaviors:
+  interaction:
+    directive: You should respond strictly in JSON format.
+    backdrop: |
+      Generate sample conversation examples in JSON format to evaluate the short-term memory recall abilities of conversational AI systems. Each example should include an initial message from the user containing only one piece of information, strictly limited to that single detail. This should be followed by a second message in which the user asks a question pertaining to the information previously provided.
+      
+      This is the format of the expected output:
+      ```json
+      {
+        "samples":
+        [
+          {
+            "user":
+            [
+              "My favorite cuisine is Mexican food.",
+              "What's my favorite type of cuisine?"
+            ],
+            "expected-answer": "Mexican"
+          },
+          {
+            "user":
+            [
+              "I learned today that the Great Wall of China is visible from space.",
+              "What did I say I learned about today?"
+            ],
+            "expected-answer": "The Great Wall of China is visible from space."
+          }
+        ]
+      }
+      ```
+
+provider:
+  id: openai
+  credentials:
+    address: ENV/OPENAI_API_ADDRESS
+    access-token: ENV/OPENAI_API_KEY
+  settings:
+    user: ENV/NANO_BOTS_END_USER
+    model: gpt-4-1106-preview
+    response_format:
+      type: json_object
+    temperature: 1

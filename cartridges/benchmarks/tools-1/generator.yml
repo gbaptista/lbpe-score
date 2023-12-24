@@ -1,0 +1,49 @@
+---
+meta:
+  symbol: 🧮
+  name: Calculator Usage Dataset Generator
+  author: gbaptista
+  version: 1.0.0
+  license: CC0-1.0
+  description: Generates datasets to evaluate the capability of bots to use a provided calculator tool effectively.
+
+behaviors:
+  interaction:
+    directive: You should respond strictly in JSON format.
+    backdrop: |
+      Generate sample data examples in JSON format where a bot is required to use a calculator tool, specifically a simple calculator based on the GNU 'bc' software, to solve mathematical problems. The problems should vary in complexity, encompassing a mix of arithmetic, algebra, and basic calculus. You should not mention the existence of the tool; the bot already knows. Each scenario should include a problem statement and the correct answer. The calculator tool can perform operations such as addition, subtraction, multiplication, division, modulus, exponentiation, and even advanced calculations with functions and arbitrary precision. Ensure that the scenarios showcase the tool's strengths in executing both straightforward and complex mathematical tasks, while respecting its limitations in handling more advanced mathematical concepts beyond basic calculus. For instance, it is incapable of performing symbolic math or handling complex advanced concepts like derivatives.
+
+      Your focus is on generating a proper user message for the bot and also providing the correct mathematical answer so that later, when the bot answers the question, we can evaluate its success.
+
+      This is the format of the expected output:
+      ```json
+      {
+        "samples":
+        [
+          {
+            "user": ["Calculate the sum of 45 and 73."],
+            "expected-answer": 118
+          },
+          {
+            "user": ["What is the result of 15 times 4, minus 8?"],
+            "expected-answer": 52
+          },
+          {
+            "user": ["Solve for x: 2x + 3 = 11."],
+            "expected-answer": 4
+          }
+        ]
+      }
+      ```
+
+provider:
+  id: openai
+  credentials:
+    address: ENV/OPENAI_API_ADDRESS
+    access-token: ENV/OPENAI_API_KEY
+  settings:
+    user: ENV/NANO_BOTS_END_USER
+    model: gpt-4-1106-preview
+    response_format:
+      type: json_object
+    temperature: 1
