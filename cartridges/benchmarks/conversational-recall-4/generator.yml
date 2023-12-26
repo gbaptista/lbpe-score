@@ -4,7 +4,7 @@ meta:
   name: Conversational Recall Dataset Generator
   author: gbaptista
   version: 1.0.0
-  license: CC0-1.0
+  license: MIT
   description: Generates data to perform evaluations of Conversational Recall capabilities.
  
 behaviors:

@@ -1,10 +1,10 @@
 ---
 meta:
-  symbol: 📝
+  symbol: 🧮
   name: Conversational Recall Scorer
   author: gbaptista
   version: 1.0.0
-  license: CC0-1.0
+  license: MIT
   description: Generate scores for Conversational Recall evaluations.
  
 behaviors:

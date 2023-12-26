@@ -1,10 +1,10 @@
 ---
 meta:
-  symbol: 🧮
+  symbol: 📝
   name: Calculator Usage Dataset Generator
   author: gbaptista
   version: 1.0.0
-  license: CC0-1.0
+  license: MIT
   description: Generates datasets to evaluate the capability of bots to use a provided calculator tool effectively.
 
 behaviors:

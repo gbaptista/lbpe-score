@@ -1,10 +1,10 @@
 ---
 meta:
-  symbol: 🧮⚖️
+  symbol: 🧮
   name: Calculator Tool Usage Scorer
   author: gbaptista
   version: 1.0.0
-  license: CC0-1.0
+  license: MIT
   description: Evaluate and score the effectiveness of AI models in using a calculator tool for solving mathematical problems, including the decision to use the tool.
 
 behaviors:

@@ -1,10 +1,10 @@
 ---
 meta:
-  symbol: 🧩⚖️
+  symbol: 🧮
   name: Creative Calculation Scenario Scorer
   author: gbaptista
   version: 1.0.0
-  license: CC0-1.0
+  license: MIT
   description: Assess and score AI models on their ability to infer the need for and effectively use a calculator tool in creative scenarios, including the decision to use the tool.
 
 behaviors:

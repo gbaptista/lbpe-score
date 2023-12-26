@@ -1,10 +1,10 @@
 ---
 meta:
-  symbol: 🧩
+  symbol: 📝
   name: Creative Calculation Scenario Generator
   author: gbaptista
   version: 1.0.0
-  license: CC0-1.0
+  license: MIT
   description: Generates creative scenarios for evaluating a bot's inferential use of a calculator tool in real-world contexts. Scenarios imply the need for calculations without explicitly stating it.
 
 behaviors:
