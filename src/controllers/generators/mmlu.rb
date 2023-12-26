@@ -33,12 +33,12 @@ module LBPE
 
             data = {
               meta: {
-                id: id,
-                benchmark: benchmark,
+                id:,
+                benchmark:,
                 'generated-at': at.iso8601
               },
               environment: Components::Environment.details,
-              sample: sample
+              sample:
             }
             path = "data/datasets/#{benchmark}-#{field.gsub(' ', '-')}"
             file = "#{at.strftime('%Y-%m-%d-%H-%M-%S')}-#{id}.yml"

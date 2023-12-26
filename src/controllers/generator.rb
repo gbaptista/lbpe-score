@@ -38,15 +38,15 @@ module LBPE
         id = SecureRandom.hex
         data = {
           meta: {
-            id: id,
-            benchmark: benchmark,
+            id:,
+            benchmark:,
             'generated-at': at.iso8601,
-            seed: seed
+            seed:
           },
           environment: Components::Environment.details,
-          sample: sample,
-          input: input,
-          cartridge: cartridge
+          sample:,
+          input:,
+          cartridge:
         }
 
         elastic.index!(benchmark, sample)
@@ -69,13 +69,13 @@ module LBPE
 
       def self.random_samples(benchmark, size)
         Dir["data/datasets/#{benchmark}/*.yml"].shuffle.slice(0, size).map do |path|
-          YAML.safe_load(File.read(path), permitted_classes: [Symbol])['sample']
+          YAML.safe_load_file(path, permitted_classes: [Symbol])['sample']
         end
       end
 
       def self.index_samples!(elastic, benchmark)
         Dir["data/datasets/#{benchmark}/*.yml"].each do |path|
-          sample = YAML.safe_load(File.read(path), permitted_classes: [Symbol])
+          sample = YAML.safe_load_file(path, permitted_classes: [Symbol])
           elastic.index!(benchmark, sample['sample'])
         end
       end
@@ -97,15 +97,12 @@ module LBPE
 
         index_samples!(elastic, benchmark)
 
-        cartridge = YAML.safe_load(
-          File.read("cartridges/benchmarks/#{benchmark}/generator.yml"),
-          permitted_classes: [Symbol]
-        )
+        cartridge = YAML.safe_load_file("cartridges/benchmarks/#{benchmark}/generator.yml", permitted_classes: [Symbol])
 
         while count_samples(benchmark) < target
           puts "\n> #{count_samples(benchmark)} samples generated so far."
 
-          seed = rand(100..10**21)
+          seed = rand(100..(10**21))
 
           cartridge['provider']['settings']['seed'] = seed
 

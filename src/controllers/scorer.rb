@@ -3,6 +3,7 @@
 require 'digest'
 
 require_relative '../logic/printer'
+require_relative '../logic/identifier'
 require_relative '../components/environment'
 
 module LBPE
@@ -48,69 +49,43 @@ module LBPE
         score_sample(benchmark, model, cartridge, raw_cartridge, cartridge_path, sample_path)
       end
 
-      def self.score_mmlu_sample(score_path, file, evaluation_id, benchmark, model, at, evaluation, sample)
-        score_number = if evaluation[:result].last[:content].strip.upcase == sample[:sample][:'expected-answer'].strip.upcase
-                         5
-                       else
-                         1
-                       end
-
-        if evaluation[:result].last[:content].strip.upcase.size != 1 || sample[:sample][:'expected-answer'].strip.upcase.size != 1
-          require 'pry'
-          binding.pry
-        end
-
-        score = {
-          analysis: "#{evaluation[:result].last[:content].strip.upcase} == #{sample[:sample][:'expected-answer'].strip.upcase}",
-          score: score_number
-        }
-
-        data = {
-          meta: {
-            id: evaluation_id,
-            benchmark: benchmark,
-            model: model,
-            'generated-at': at.iso8601
-          },
-          environment: Components::Environment.details,
-          score: score,
-          evaluation: evaluation[:result]
-        }
-
-        yaml_data = YAML.dump(Logic::Printer.stringify_keys(data))
-
-        puts "\n> #{score_path}/#{file}"
-
-        FileUtils.mkdir_p(score_path)
-        File.write("#{score_path}/#{file}", yaml_data)
-      end
-
-      def self.score_sample(benchmark, model, _cartridge, raw_cartridge, _cartridge_path, sample_path)
+      def self.score_sample(benchmark, model, _cartridge, raw_cartridge, cartridge_path, sample_path)
         raw_sample = File.read(sample_path)
 
-        evaluation_id = Digest::SHA256.hexdigest("#{raw_cartridge}\n#{raw_sample}")
+        legacy_evaluation_id = Digest::SHA256.hexdigest("#{raw_cartridge}\n#{raw_sample}")
+
+        new_evaluation_id = Logic::Identifier.cartridge_with_sample(cartridge_path, sample_path)
 
         path = "data/evaluations/#{benchmark}/#{model}"
-        file = "#{evaluation_id}.yml"
+        legacy_file = "#{legacy_evaluation_id}.yml"
+        new_file = "#{new_evaluation_id}.yml"
 
-        unless File.exist?("#{path}/#{file}")
-          puts "Sample '#{evaluation_id}' not evaluated yet for '#{model}'."
+        unless File.exist?("#{path}/#{new_file}")
+          puts "Sample '#{new_evaluation_id}' not evaluated yet for '#{model}'."
           return
         end
 
         score_path = "data/scores/#{benchmark}/#{model}"
 
-        if File.exist?("#{score_path}/#{file}")
-          puts "Sample '#{evaluation_id}' already scored for '#{model}'."
+        if File.exist?("#{score_path}/#{legacy_file}")
+          to_migrate = YAML.safe_load_file("#{score_path}/#{legacy_file}", permitted_classes: [Symbol])
+
+          to_migrate['meta']['id'] = new_evaluation_id
+
+          File.write("#{score_path}/#{new_file}", YAML.dump(to_migrate))
+          File.delete("#{score_path}/#{legacy_file}")
+
+          puts "[MIGRATED] Sample '#{new_evaluation_id}' already scored for '#{model}'."
+          return
+        elsif File.exist?("#{score_path}/#{new_file}")
+          puts "Sample '#{new_evaluation_id}' already scored for '#{model}'."
           return
         end
 
         at = Time.now
 
         evaluation = Logic::Printer.symbolize_keys(
-          YAML.safe_load(
-            File.read("#{path}/#{file}"), permitted_classes: [Symbol]
-          )
+          YAML.safe_load_file("#{path}/#{new_file}", permitted_classes: [Symbol])
         )
 
         Logic::Printer.symbolize_keys(
@@ -127,12 +102,6 @@ module LBPE
                 NanoBot.new(cartridge: "cartridges/benchmarks/#{benchmark}/scorer.yml")
               end
 
-        # return score_mmlu_sample(
-        #   score_path, file,
-        #   evaluation_id, benchmark, model, at,
-        #   evaluation, sample
-        # )
-
         input = if benchmark.start_with?('MMLU')
                   evaluation[:result]
                   "The expected correct answer option for this question is: #{evaluation[:sample][:'expected-answer']})\nBased on that, please analyze and score the following evaluation:\n```json\n#{JSON.pretty_generate(
@@ -148,9 +117,9 @@ module LBPE
 
         data = {
           meta: {
-            id: evaluation_id,
-            benchmark: benchmark,
-            model: model,
+            id: new_evaluation_id,
+            benchmark:,
+            model:,
             'generated-at': at.iso8601
           },
           environment: Components::Environment.details,
@@ -160,10 +129,10 @@ module LBPE
 
         yaml_data = YAML.dump(Logic::Printer.stringify_keys(data))
 
-        puts "\n> #{score_path}/#{file}"
+        puts "\n> #{score_path}/#{new_file}"
 
         FileUtils.mkdir_p(score_path)
-        File.write("#{score_path}/#{file}", yaml_data)
+        File.write("#{score_path}/#{new_file}", yaml_data)
       end
     end
   end

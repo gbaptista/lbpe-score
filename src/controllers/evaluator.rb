@@ -1,8 +1,10 @@
 # frozen_string_literal: true
 
 require 'digest'
+require 'fileutils'
 
 require_relative '../logic/printer'
+require_relative '../logic/identifier'
 require_relative '../components/environment'
 
 module LBPE
@@ -14,7 +16,11 @@ module LBPE
         end
 
         samples = if sample_path.nil?
-                    Dir["data/datasets/#{benchmark}-*/*.yml"].map(&:to_s) if benchmark == 'MMLU'
+                    if benchmark == 'MMLU'
+                      Dir["data/datasets/#{benchmark}-*/*.yml"].map(&:to_s)
+                    else
+                      Dir["data/datasets/#{benchmark}/*.yml"].map(&:to_s)
+                    end
                   else
                     [sample_path]
                   end
@@ -41,13 +47,29 @@ module LBPE
       def self.evaluate_sample(benchmark, model, cartridge, raw_cartridge, cartridge_path, sample_path)
         raw_sample = File.read(sample_path)
 
-        evaluation_id = Digest::SHA256.hexdigest("#{raw_cartridge}\n#{raw_sample}")
+        clean_cartridge = Logic::Printer.stringify_keys(
+          Logic::Identifier.cartridge(cartridge_path, as_raw: true)
+        )
+
+        legacy_id = Digest::SHA256.hexdigest("#{raw_cartridge}\n#{raw_sample}")
+
+        new_id = Logic::Identifier.cartridge_with_sample(cartridge_path, sample_path)
 
         path = "data/evaluations/#{benchmark}/#{model}"
-        file = "#{evaluation_id}.yml"
+        legacy_file = "#{legacy_id}.yml"
+        file = "#{new_id}.yml"
 
-        if File.exist?("#{path}/#{file}")
-          puts "Sample '#{evaluation_id}' already evaluated for '#{model}'."
+        if File.exist?("#{path}/#{legacy_file}")
+          to_migrate = YAML.safe_load_file("#{path}/#{legacy_file}", permitted_classes: [Symbol])
+          to_migrate['meta']['id'] = new_id
+          to_migrate['cartridge'] = clean_cartridge
+          File.write("#{path}/#{legacy_file}", YAML.dump(to_migrate))
+
+          FileUtils.mv("#{path}/#{legacy_file}", "#{path}/#{file}")
+          puts "[MIGRATED] Sample '#{new_id}' already evaluated for '#{model}'"
+          return
+        elsif File.exist?("#{path}/#{file}")
+          puts "Sample '#{new_id}' already evaluated for '#{model}'."
           return
         end
 
@@ -81,14 +103,14 @@ module LBPE
 
         data = {
           meta: {
-            id: evaluation_id,
-            benchmark: benchmark,
-            model: model,
+            id: new_id,
+            benchmark:,
+            model:,
             'generated-at': at.iso8601
           },
           environment: Components::Environment.details,
-          result: result,
-          cartridge: cartridge,
+          result:,
+          cartridge:,
           sample: sample[:sample]
         }
 
@@ -100,7 +122,7 @@ module LBPE
         FileUtils.mkdir_p(path)
         File.write("#{path}/#{file}", yaml_data)
       rescue StandardError => e
-        puts "Error evaluating '#{evaluation_id}' for '#{model}': #{e.message}"
+        puts "Error evaluating '#{new_id}' for '#{model}': #{e.message}"
       end
     end
   end

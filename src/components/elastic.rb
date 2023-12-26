@@ -37,7 +37,7 @@ module LBPE
       }.freeze
 
       def client
-        @client ||= Elasticsearch::Client.new(host: ENV['ELASTICSEARCH_HOST'])
+        @client ||= Elasticsearch::Client.new(host: ENV.fetch('ELASTICSEARCH_HOST', nil))
       end
 
       def reset_index!(benchmark)
@@ -70,7 +70,7 @@ module LBPE
           }
         }
 
-        response = @client.search(index: benchmark, body: body)
+        response = @client.search(index: benchmark, body:)
 
         hits = response.body.dig('hits', 'hits')
 

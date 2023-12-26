@@ -118,11 +118,12 @@ Keep in mind that running these benchmarks can be costly; we are talking about e
 ```sh
 bundle
 rubocop -A
+rspec
 ```
 
 ### Charts
 ```sh
-cd site
+cd docs
 sudo npm install http-server -g
 http-server -p 3000 --cors -c-1
 ```

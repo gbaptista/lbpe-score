@@ -53,7 +53,7 @@ module LBPE
         results['percentage'] = percentage
 
         File.write(
-          'site/data/report.json',
+          'docs/data/report.json',
           JSON.pretty_generate(results, indent: '  ')
         )
 
@@ -87,7 +87,7 @@ module LBPE
 
         Dir['data/scores/*/*/*/*/*.yml'].map do |path|
           result = Logic::Printer.symbolize_keys(
-            YAML.safe_load(File.read(path), permitted_classes: [Symbol])
+            YAML.safe_load_file(path, permitted_classes: [Symbol])
           )
 
           benchmark = result[:meta][:benchmark].start_with?('MMLU') ? 'MMLU' : result[:meta][:benchmark]
