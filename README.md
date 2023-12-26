@@ -2,7 +2,8 @@
 
 This repository contains the source code used to evaluate and generate results for the LBPE Score. It also provides replication for the MMLU test.
 
-You can read more about this in the article on Medium: [_Gemini claims superiority over ChatGPT: I tried to replicate their findings_](https://medium.com/@gbaptista/gemini-claims-superiority-over-chatgpt-i-tried-to-replicate-their-findings-9751b31394b1?source=friends_link&sk=bb14b49af16b977a82fa9cfb81bf7840)
+You can read more about this in the article on Medium:
+- [_Gemini claims superiority over ChatGPT: I tried to replicate their findings_](https://medium.com/@gbaptista/gemini-claims-superiority-over-chatgpt-i-tried-to-replicate-their-findings-9751b31394b1?source=friends_link&sk=bb14b49af16b977a82fa9cfb81bf7840)
 
 Detailed charts with results: https://gbaptista.github.io/lbpe-score/
 
