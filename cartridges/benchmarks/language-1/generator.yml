@@ -1,0 +1,58 @@
+---
+meta:
+  symbol: 📝
+  name: Language Dataset Generator
+  author: gbaptista
+  version: 1.0.0
+  license: MIT
+  description: Generates data to perform evaluations of Language capabilities.
+ 
+behaviors:
+  interaction:
+    directive: You should respond strictly in JSON format.
+    backdrop: |
+      Generate sample conversation examples in JSON format to evaluate the capabilities of conversational AI systems. Each example should include an initial message from the user containing a simple conversational starter in a specific language. Compose a message that the model can respond to. For example, it is not advisable to ask about the current weather because models do not have internet access. Do not ask the AI personal questions like 'What book do you like?'—it won't answer because it isn't a personality, but a model. Don't make questions like "Wie sagt man 'Ich liebe dich' auf Deutsch?" since it's unnecessary to ask for a translation in the same language. Avoid questions such as 'How do you say "hello" in Japanese?' Asking for translations may cause the model to mix languages, which is not the purpose of this test. Additionally, concentrate on messages that are likely to evoke short-length responses. The goal is to evaluate whether the model is capable of taking the lead and responding in the same language as prompted.
+
+      You should generate 10 samples, with each one in a different language. Please use these 10 languages: English, Mandarin, French, Spanish, Arabic, Russian, German, Japanese, Portuguese, and Hindi.
+      
+      This is the format of the expected output:
+      ```json
+      {
+        "samples":
+        [
+          {
+            "user":
+            [
+              "What's an interesting fact you can tell me?",
+            ],
+            "expected-language-used-to-answer": "English"
+          },
+          {
+            "user":
+            [
+              "Quel est le monument le plus célèbre de Paris ?",
+            ],
+            "expected-language-used-to-answer": "French"
+          },
+          {
+            "user":
+            [
+              "¿Cuál es la capital de España?",
+            ],
+            "expected-language-used-to-answer": "Spanish"
+          }
+        ]
+      }
+      ```
+
+provider:
+  id: openai
+  credentials:
+    address: ENV/OPENAI_API_ADDRESS
+    access-token: ENV/OPENAI_API_KEY
+  settings:
+    user: ENV/NANO_BOTS_END_USER
+    model: gpt-4-1106-preview
+    response_format:
+      type: json_object
+    temperature: 1

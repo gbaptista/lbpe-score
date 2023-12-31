@@ -3,7 +3,7 @@
 source 'https://rubygems.org'
 
 gem 'coderay', '~> 1.1', '>= 1.1.3'
-gem 'nano-bots', '~> 2.2'
+gem 'nano-bots', '~> 2.4', '>= 2.4.1'
 gem 'ruby-openai', '~> 6.3', '>= 6.3.1'
 
 gem 'dotenv', '~> 2.8', '>= 2.8.1'

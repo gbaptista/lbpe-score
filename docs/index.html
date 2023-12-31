@@ -3,113 +3,587 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>LBPE Score</title>
+    <title>LBPE Score: A New Perspective for Evaluating AI LLMs</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
   </head>
   <body>
     <div class="container main-container">
       <h1>LBPE Score</h1>
+      <ul class="articles">
+        <li>
+          Stories
+          <ul>
+            <!-- <li>
+              <a href="#TODO" target="_blank">
+                <em>LBPE Score: A New Perspective for Evaluating AI LLMs</em>
+              </a>
+            </li> -->
+            <li>
+              <a href="https://medium.com/@gbaptista/gemini-claims-superiority-over-chatgpt-i-tried-to-replicate-their-findings-9751b31394b1?source=friends_link&sk=bb14b49af16b977a82fa9cfb81bf7840" target="_blank">
+                <em>Gemini claims superiority over ChatGPT: I tried to replicate their findings</em>
+              </a>
+            </li>
+          </ul>
+        </li>
+        <li>
+          Source and Data
+          <ul>
+            <li>
+              <a href="https://github.com/gbaptista/lbpe-score" target="_blank">github.com/gbaptista/lbpe-score</a>
+            </li>
+            <li>
+              <a href="https://github.com/gbaptista/lbpe-score-data" target="_blank">github.com/gbaptista/lbpe-score-data</a>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a href="#references">References</a>
+        </li>
+      </ul>
 
-      <div class="chart percentage">
-        <h2>Consolidated %</h2>
-        <canvas id="consolidated-percentage"></canvas>
+      <div class="row">
+        <div class="col-lg">
+          <ul>
+            <li>
+              <a href="#all-models">Models</a>
+              <ul>
+                <li><a href="#cohere-command">Cohere Command</a></li>
+                <li><a href="#cohere-command-light">Cohere Command Light</a></li>
+                <li><a href="#google-gemini-pro">Google Gemini Pro</a></li>
+                <li><a href="#maritaca-maritalk">Maritaca MariTalk</a></li>
+                <li><a href="#mistral-medium">Mistral Medium</a></li>
+                <li><a href="#mistral-small">Mistral Small</a></li>
+                <li><a href="#mistral-tiny">Mistral Tiny</a></li>
+                <li><a href="#openai-gpt-4-turbo">OpenAI GPT-4 Turbo</a></li>
+                <li><a href="#openai-gpt-3-5-turbo">OpenAI GPT-3.5 Turbo</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+        <div class="col-lg">
+          <ul>
+            <li>
+              Scores
+              <ul>
+                <li><a href="#back-and-forth-conversations">Back-and-forth conversations</a></li>
+                <li><a href="#tools-functions">Tools (Functions)</a></li>
+                <li><a href="#polyglotism">Polyglotism</a></li>
+                <li><a href="#streaming">Streaming</a></li>
+                <li><a href="#latency">Latency</a></li>
+                <li><a href="#pricing">Pricing</a></li>
+                <li>
+                  Popular Benchmarks
+                  <ul>
+                    <li><a href="#MMLU-benchmark">MMLU</a></li>
+                    <li><a href="#ENEM-benchmark">ENEM</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="radars">
+        <div class="row">
+          <div class="col">
+          </div>
+          <div class="col-lg-7">
+            <div class="radar" id="all-models">
+              <canvas id="consolidated-radar"></canvas>
+            </div>
+          </div>
+          <div class="col">
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <div class="radar" id="cohere-command">
+              <canvas id="cohere/command-radar"></canvas>
+            </div>
+          </div>
+          <div class="col">
+            <div class="radar" id="cohere-command-light">
+              <canvas id="cohere/command-light-radar"></canvas>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <div class="radar" id="google-gemini-pro">
+              <canvas id="google/gemini-pro-radar"></canvas>
+            </div>
+          </div>
+          <div class="col">
+            <div class="radar" id="maritaca-maritalk">
+              <canvas id="maritaca/maritalk-radar"></canvas>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <div class="radar" id="mistral-medium">
+              <canvas id="mistral/medium-radar"></canvas>
+            </div>
+          </div>
+          <div class="col">
+            <div class="radar" id="mistral-small">
+              <canvas id="mistral/small-radar"></canvas>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg">
+            <div class="radar" id="mistral-tiny">
+              <canvas id="mistral/tiny-radar"></canvas>
+            </div>
+          </div>
+          <div class="col">
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <div class="radar" id="openai-gpt-4-turbo">
+              <canvas id="openai/gpt-4-turbo-radar"></canvas>
+            </div>
+          </div>
+          <div class="col">
+            <div class="radar" id="openai-gpt-3-5-turbo">
+              <canvas id="openai/gpt-3-5-turbo-radar"></canvas>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="chart" id="back-and-forth-conversations">
+        <h2>Back-and-forth conversations</h2>
+
+        <p>
+          Average of BaFC A, BaFC B, BaFC C, and BaFC D.
+        </p>
+
+        <div class="percentage">
+          <canvas id="bafc-consolidated"></canvas>
+        </div>
       </div>
 
       <div class="chart">
-        <h2>Consolidated</h2>
-        <canvas id="consolidated"></canvas>
+        <h3>BaFC A</h3>
+        
+        <p>
+          Back-and-forth conversations: One piece of information is provided, followed by a question about it.
+        </p>
+
+        <div class="percentage">
+          <canvas id="conversational-recall-1-percentage"></canvas>
+        </div>
+
+        <div class="details">
+          <canvas id="conversational-recall-1"></canvas>
+        </div>
       </div>
 
-      <div class="chart percentage">
-        <h2>MMLU %</h2>
-        <canvas id="MMLU-percentage"></canvas>
+      <div class="chart">
+        <h3>BaFC B</h3>
+        
+        <p>
+          Back-and-forth conversations: One piece of information is provided, followed by a question about it. The information provided avoids personal data or common knowledge, forcing the model to reason and removing privacy concerns.
+        </p>
+
+        <div class="percentage">
+          <canvas id="conversational-recall-2-percentage"></canvas>
+        </div>
+
+        <div class="details">
+          <canvas id="conversational-recall-2"></canvas>
+        </div>
       </div>
 
-      <div class="chart show">
+      <div class="chart">
+        <h3>BaFC C</h3>
+        
+        <p>
+          Back-and-forth conversations: The first message gives several details; the following 2 messages changes the subject, which might ‘confuse’ the model, and then a question about the first message is asked.
+        </p>
+
+        <div class="percentage">
+          <canvas id="conversational-recall-3-percentage"></canvas>
+        </div>
+
+        <div class="details">
+          <canvas id="conversational-recall-3"></canvas>
+        </div>
+      </div>
+
+      <div class="chart">
+        <h3>BaFC D</h3>
+        
+        <p>
+          Back-and-forth conversations: The first message gives several details; the following 2 messages changes the subject, which might ‘confuse’ the model, and then a question about the first message is asked. The information provided avoids personal data or common knowledge, forcing the model to reason and removing privacy concerns.
+        </p>
+
+        <div class="percentage">
+          <canvas id="conversational-recall-4-percentage"></canvas>
+        </div>
+
+        <div class="details">
+          <canvas id="conversational-recall-4"></canvas>
+        </div>
+      </div>
+
+      <div class="chart" id="tools-functions">
+        <h2>Tools (Functions)</h2>
+
+        <p>
+          Average of Tools A and Tool B.
+        </p>
+
+        <div class="percentage">
+          <canvas id="tools-consolidated"></canvas>
+        </div>
+      </div>
+
+      <div class="chart">
+        <h3>Tools A</h3>
+        
+        <p>
+          Straightforward math questions that could use a calculator.
+        </p>
+
+        <div class="percentage">
+          <canvas id="tools-1-percentage"></canvas>
+        </div>
+
+        <div class="details short">
+          <canvas id="tools-1"></canvas>
+        </div>
+      </div>
+
+      <div class="chart">
+        <h3>Tools B</h3>
+        
+        <p>
+          Implied math questions; the possible need for a calculator must be inferred.
+        </p>
+
+        <div class="percentage">
+          <canvas id="tools-2-percentage"></canvas>
+        </div>
+
+        <div class="details short">
+          <canvas id="tools-2"></canvas>
+        </div>
+      </div>
+
+      <div class="chart" id="polyglotism">
+        <h2>Polyglotism</h2>
+
+        <p>
+          Provides a conversation starter in a language, and the model must respond in that language.
+        </p>
+
+        <div class="percentage">
+          <canvas id="language-consolidated"></canvas>
+        </div>
+
+        <div class="details">
+          <canvas id="language-1"></canvas>
+        </div>
+      </div>
+
+      <div class="chart" id="streaming">
+        <h2>Streaming</h2>
+
+        <p>
+          Weighted average, where RTTFC has 10 times more weight than ARTTTC and ACRTFO.
+        </p>
+
+        <div class="percentage">
+          <canvas id="stream-consolidated"></canvas>
+        </div>
+      </div>
+
+      <div class="chart">
+        <h3>RTTFC</h3>
+        
+        <p>
+          How fast was the first character received compared to the total request time? If the first character is received rapidly relative to the request's total duration, it indicates efficient streaming. Conversely, very long durations suggest an absence of streaming.
+        </p>
+
+        <div class="percentage">
+          <canvas id="stream/RTTFC"></canvas>
+        </div>
+      </div>
+
+      <div class="chart">
+        <h3>ARTTTC</h3>
+        
+        <p>
+          Average speed for the slowest 10% of streaming events compared to the total request duration. High numbers mean that the mode delivers partial characters at a high speed, creating the feeling of "live typing." A low number can cause the model to appear as though it "freezes."
+        </p>
+
+        <div class="percentage">
+          <canvas id="stream/ARTTTC"></canvas>
+        </div>
+      </div>
+
+      <div class="chart">
+        <h3>ACRTFO</h3>
+        
+        <p>
+          Average characters per stream event compared to final output characters count.
+          Models with a higher number produce text more quickly, simulating "live typing". High ACRTFO scores are irrelevant if RTTFC and ARTTTC are low: receiving 10 stream events after a 5-second delay don't create the feeling of streaming at all.
+        </p>
+
+        <div class="percentage">
+          <canvas id="stream/ACRTFO"></canvas>
+        </div>
+      </div>
+
+      <div class="chart" id="latency">
+        <h2>Latency</h2>
+
+        <p>
+          The highest CPS sets the perfect score at 100%. Scores for each model are then compared to this number.
+        </p>
+
+        <div class="percentage">
+          <canvas id="latency-consolidated"></canvas>
+        </div>
+      </div>
+
+      <div class="chart">
+        <h3>CPS</h3>
+        
+        <p>
+          Characters count / completion time in seconds for the request.
+        </p>
+
+        <div class="percentage">
+          <canvas id="latency/CPS"></canvas>
+        </div>
+      </div>
+
+      <div class="chart" id="pricing">
+        <h2>Pricing</h2>
+
+        <p>
+          Weighted average of Input Price (1x), Output Price (2x), Average Number of Output Tokens (1x), and Average Cost per 10,000 Prompts (3x).
+        </p>
+
+        <div class="percentage">
+          <canvas id="pricing-consolidated"></canvas>
+        </div>
+      </div>
+
+      <div class="chart">
+        <h3>Input: USD / 1M tokens</h3>
+        
+        <p>
+          Input pricing normalized to USD and number of tokens. The lower the price, the higher the percentage score the model has in Cost Efficiency.
+        </p>
+
+        <div class="percentage">
+          <canvas id="pricing/input/usd/1M-tokens-percentage"></canvas>
+        </div>
+
+        <div class="percentage">
+          <canvas id="pricing/input/usd/1M-tokens"></canvas>
+        </div>
+      </div>
+
+      <div class="chart">
+        <h3>Output: USD / 1M tokens</h3>
+        
+        <p>
+          Output pricing normalized to USD and number of tokens. The lower the price, the higher the percentage score the model has in Cost Efficiency.
+        </p>
+
+        <div class="percentage">
+          <canvas id="pricing/output/usd/1M-tokens-percentage"></canvas>
+        </div>
+
+        <div class="percentage">
+          <canvas id="pricing/output/usd/1M-tokens"></canvas>
+        </div>
+      </div>
+
+      <div class="chart">
+        <h3>Average Output Tokens</h3>
+        
+        <p>
+          The number of tokens a model generates matters; a seemingly cheaper model might cost more if it produces too many tokens. For instance, a model half as expensive as another might not save you money if it generates twice as many tokens for the same prompt.
+        </p>
+
+        <div class="percentage">
+          <canvas id="pricing/output/average-tokens-percentage"></canvas>
+        </div>
+
+        <div class="percentage">
+          <canvas id="pricing/output/average-tokens"></canvas>
+        </div>
+      </div>
+
+      <div class="chart">
+        <h3>Average Cost / 10k Prompts</h3>
+        
+        <p>
+          Average Output Tokens * 10k * USD per Output Token
+        </p>
+
+        <div class="percentage">
+          <canvas id="pricing/output/average-USD-cost-10k-prompts-percentage"></canvas>
+        </div>
+
+        <div class="percentage">
+          <canvas id="pricing/output/average-USD-cost-10k-prompts"></canvas>
+        </div>
+      </div>
+
+      <div class="chart" id="MMLU-benchmark">
         <h2>MMLU</h2>
-        <canvas id="MMLU"></canvas>
+
+        <p>
+          A reproduction of 1,760 questions from the <em><a href="https://arxiv.org/abs/2009.03300" target="_blank">MMLU</a></em> (Massive Multitask Language Understanding) benchmark.
+        </p>
+
+        <div class="percentage">
+          <canvas id="MMLU-percentage"></canvas>
+        </div>
+
+        <div class="details">
+          <canvas id="MMLU"></canvas>
+        </div>
       </div>
 
-      <div class="chart percentage">
-        <h2>Short A %</h2>
-        <canvas id="conversational-recall-1-percentage"></canvas>
+      <div class="chart" id="ENEM-benchmark">
+        <h2>ENEM</h2>
+
+        <p>
+          A reproduction of 360 questions from the <em><a href="https://huggingface.co/datasets/maritaca-ai/enem" target="_blank">ENEM</a></em> (Brazilian University Admission Exam) test.
+        </p>
+
+        <div class="percentage">
+          <canvas id="ENEM-percentage"></canvas>
+        </div>
+
+        <div class="details">
+          <canvas id="ENEM"></canvas>
+        </div>
       </div>
 
-      <div class="chart">
-        <h2>Short A</h2>
-        <canvas id="conversational-recall-1"></canvas>
-      </div>
+      <h2 id="references">References</h2>
+      <ul>
+        <li>
+          Stories
+          <ul>
+            <!-- <li>
+              <a href="#TODO" target="_blank">
+                <em>LBPE Score: A New Perspective for Evaluating AI LLMs</em>
+              </a>
+            </li> -->
+            <li>
+              <a href="https://medium.com/@gbaptista/gemini-claims-superiority-over-chatgpt-i-tried-to-replicate-their-findings-9751b31394b1?source=friends_link&sk=bb14b49af16b977a82fa9cfb81bf7840" target="_blank">
+                <em>Gemini claims superiority over ChatGPT: I tried to replicate their findings</em>
+              </a>
+            </li>
+          </ul>
+        </li>
+        <li>
+          Source and Data
+          <ul>
+            <li>
+              <a href="https://github.com/gbaptista/lbpe-score" target="_blank">github.com/gbaptista/lbpe-score</a>
+            </li>
+            <li>
+              <a href="https://github.com/gbaptista/lbpe-score-data" target="_blank">github.com/gbaptista/lbpe-score-data</a>
+            </li>
+          </ul>
+        </li>
+        <li>
+          Papers
+          <ul>
+            <li>
+              <a href="https://storage.googleapis.com/deepmind-media/gemini/gemini_1_report.pdf" target="_blank">
+                <em>Gemini: A Family of Highly Capable Multimodal Models</em>
+              </a>
+            </li>
+            <li>
+              <a href="https://arxiv.org/abs/2009.03300" target="_blank">
+                <em>Measuring Massive Multitask Language Understanding</em>
+              </a>
+            </li>
+            <li>
+              <a href="https://arxiv.org/abs/2008.02275" target="_blank">
+                <em>Aligning AI With Shared Human Values</em>
+              </a>
+            </li>
+            <li>
+              <a href="https://arxiv.org/abs/2303.17003" target="_blank">
+                <em>Evaluating GPT-3.5 and GPT-4 Models on Brazilian University Admission Exams</em>
+              </a>
+            </li>
+            <li>
+              <a href="https://arxiv.org/abs/2304.07880" target="_blank">
+                <em>Sabiá: Portuguese Large Language Models</em>
+              </a>
+            </li>
+            <li>
+              <a href="https://arxiv.org/abs/2311.14169" target="_blank">
+                <em>Evaluating GPT-4's Vision Capabilities on Brazilian University Admission Exams</em>
+              </a>
+            </li>
+          </ul>
+        </li>
+      </ul>
 
-      <div class="chart percentage">
-        <h2>Short B %</h2>
-        <canvas id="conversational-recall-2-percentage"></canvas>
-      </div>
-
-      <div class="chart">
-        <h2>Short B</h2>
-        <canvas id="conversational-recall-2"></canvas>
-      </div>
-
-      <div class="chart percentage">
-        <h2>Long A %</h2>
-        <canvas id="conversational-recall-3-percentage"></canvas>
-      </div>
-
-      <div class="chart">
-        <h2>Long A</h2>
-        <canvas id="conversational-recall-3"></canvas>
-      </div>
-
-      <div class="chart percentage">
-        <h2>Long B %</h2>
-        <canvas id="conversational-recall-4-percentage"></canvas>
-      </div>
-
-      <div class="chart">
-        <h2>Long B</h2>
-        <canvas id="conversational-recall-4"></canvas>
-      </div>
-
-      <div class="chart percentage">
-        <h2>Direct Math %</h2>
-        <canvas id="tools-1-percentage"></canvas>
-      </div>
-
-      <div class="chart">
-        <h2>Direct Math</h2>
-        <canvas id="tools-1"></canvas>
-      </div>
-
-      <div class="chart percentage">
-        <h2>Inference Math %</h2>
-        <canvas id="tools-2-percentage"></canvas>
-      </div>
-
-      <div class="chart">
-        <h2>Inference Math</h2>
-        <canvas id="tools-2"></canvas>
-      </div>
+      <footer class="text-secondary">
+        LBPE Report 1.0.0 | January 1, 2024
+        <br><br>
+        <a class="text-secondary" href="https://github.com/gbaptista/lbpe-score?tab=MIT-1-ov-file" target="_blank">
+          MIT License
+        </a>
+        |
+        2024
+        |
+        <a class="text-secondary" href="https://medium.com/@gbaptista" target="_blank">
+          Guilherme Baptista
+        </a>
+      </footer>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2"></script>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
-    <script src="global.js?cache=1"></script>
+    <script src="global.js?version=4f7b47c06b98ae515121548f553769d3"></script>
 
     <style>
+      footer {
+        margin-top: 4em;
+        text-align: center;
+      }
+
+      .articles {
+        margin-top: 2em;
+        margin-bottom: 2em;
+      }
       .main-container {
         margin-top: 2em;
         margin-bottom: 2em;
       }
 
-      h2 {
+      h2, h3 {
         margin-top: 1em;
-        margin-bottom: 2em;
+        margin-bottom: .6em;
       }
 
       .chart {
-        margin:4em 0;
+        display: block;
+      }
+
+      .chart p {
+        margin-bottom: 1em;
       }
 
       /*.chart {
@@ -120,9 +594,26 @@
         display: block;
       }
 
+      .chart .details {
+        height: 50em;
+      }
+
+      .chart .details.short {
+        height: 20em;
+      }
+
       .percentage {
         height: 15em;
-        margin-bottom: 10em;
+        margin-bottom: 2em;
+      }
+
+      .radars {
+        margin-top: 4em;
+/*        height: 20em;*/
+      }
+
+      .radar {
+        padding: 2em;
       }
     </style>
   </body>

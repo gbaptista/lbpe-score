@@ -1,218 +1,750 @@
 {
-  "MMLU": {
-    "google/gemini-pro": {
-      "0": 18,
-      "1": 616,
-      "2": 0,
-      "3": 0,
-      "4": 0,
-      "5": 1126
-    },
-    "openai/gpt-3-5-turbo": {
-      "0": 0,
-      "1": 638,
-      "2": 0,
-      "3": 0,
-      "4": 0,
-      "5": 1122
-    },
-    "openai/gpt-4-turbo": {
-      "0": 0,
-      "1": 248,
-      "2": 0,
-      "3": 0,
-      "4": 0,
-      "5": 1512
-    }
+  "meta": {
+    "generated_at": "2023-12-31 17:41:11 -0300"
   },
-  "conversational-recall-1": {
-    "google/gemini-pro": {
-      "0": 1,
-      "1": 32,
-      "2": 14,
-      "3": 1,
-      "4": 2,
-      "5": 50
+  "benchmarks": {
+    "ENEM": {
+      "cohere/command": {
+        "0": 14,
+        "1": 236,
+        "2": 0,
+        "3": 0,
+        "4": 0,
+        "5": 110
+      },
+      "cohere/command-light": {
+        "0": 7,
+        "1": 312,
+        "2": 0,
+        "3": 0,
+        "4": 0,
+        "5": 41
+      },
+      "google/gemini-pro": {
+        "0": 9,
+        "1": 141,
+        "2": 0,
+        "3": 0,
+        "4": 0,
+        "5": 210
+      },
+      "maritaca/maritalk": {
+        "0": 0,
+        "1": 157,
+        "2": 0,
+        "3": 0,
+        "4": 0,
+        "5": 203
+      },
+      "mistral/medium": {
+        "0": 0,
+        "1": 120,
+        "2": 0,
+        "3": 0,
+        "4": 0,
+        "5": 240
+      },
+      "mistral/small": {
+        "0": 0,
+        "1": 142,
+        "2": 0,
+        "3": 0,
+        "4": 0,
+        "5": 218
+      },
+      "mistral/tiny": {
+        "0": 0,
+        "1": 197,
+        "2": 0,
+        "3": 0,
+        "4": 0,
+        "5": 163
+      },
+      "openai/gpt-3-5-turbo": {
+        "0": 0,
+        "1": 128,
+        "2": 0,
+        "3": 0,
+        "4": 0,
+        "5": 232
+      },
+      "openai/gpt-4-turbo": {
+        "0": 0,
+        "1": 40,
+        "2": 0,
+        "3": 0,
+        "4": 0,
+        "5": 320
+      }
     },
-    "openai/gpt-3-5-turbo": {
-      "0": 0,
-      "1": 8,
-      "2": 1,
-      "3": 0,
-      "4": 2,
-      "5": 89
+    "MMLU": {
+      "cohere/command": {
+        "0": 3,
+        "1": 854,
+        "2": 0,
+        "3": 0,
+        "4": 0,
+        "5": 903
+      },
+      "cohere/command-light": {
+        "0": 0,
+        "1": 1076,
+        "2": 0,
+        "3": 0,
+        "4": 0,
+        "5": 684
+      },
+      "google/gemini-pro": {
+        "0": 17,
+        "1": 617,
+        "2": 0,
+        "3": 0,
+        "4": 0,
+        "5": 1126
+      },
+      "maritaca/maritalk": {
+        "0": 0,
+        "1": 696,
+        "2": 0,
+        "3": 0,
+        "4": 0,
+        "5": 1064
+      },
+      "mistral/medium": {
+        "0": 0,
+        "1": 493,
+        "2": 0,
+        "3": 0,
+        "4": 0,
+        "5": 1267
+      },
+      "mistral/small": {
+        "0": 0,
+        "1": 548,
+        "2": 0,
+        "3": 0,
+        "4": 0,
+        "5": 1212
+      },
+      "mistral/tiny": {
+        "0": 0,
+        "1": 768,
+        "2": 0,
+        "3": 0,
+        "4": 0,
+        "5": 992
+      },
+      "openai/gpt-3-5-turbo": {
+        "0": 0,
+        "1": 638,
+        "2": 0,
+        "3": 0,
+        "4": 0,
+        "5": 1122
+      },
+      "openai/gpt-4-turbo": {
+        "0": 0,
+        "1": 248,
+        "2": 0,
+        "3": 0,
+        "4": 0,
+        "5": 1512
+      }
     },
-    "openai/gpt-4-turbo": {
-      "0": 0,
-      "1": 5,
-      "2": 4,
-      "3": 2,
-      "4": 4,
-      "5": 85
-    }
-  },
-  "conversational-recall-2": {
-    "google/gemini-pro": {
-      "0": 0,
-      "1": 18,
-      "2": 18,
-      "3": 4,
-      "4": 5,
-      "5": 55
+    "conversational-recall-1": {
+      "cohere/command": {
+        "0": 0,
+        "1": 14,
+        "2": 11,
+        "3": 1,
+        "4": 5,
+        "5": 69
+      },
+      "cohere/command-light": {
+        "0": 0,
+        "1": 16,
+        "2": 11,
+        "3": 4,
+        "4": 6,
+        "5": 63
+      },
+      "google/gemini-pro": {
+        "0": 1,
+        "1": 32,
+        "2": 14,
+        "3": 1,
+        "4": 2,
+        "5": 50
+      },
+      "maritaca/maritalk": {
+        "0": 0,
+        "1": 9,
+        "2": 2,
+        "3": 0,
+        "4": 2,
+        "5": 87
+      },
+      "mistral/medium": {
+        "0": 0,
+        "1": 5,
+        "2": 6,
+        "3": 2,
+        "4": 3,
+        "5": 84
+      },
+      "mistral/small": {
+        "0": 0,
+        "1": 9,
+        "2": 13,
+        "3": 1,
+        "4": 5,
+        "5": 72
+      },
+      "mistral/tiny": {
+        "0": 0,
+        "1": 3,
+        "2": 2,
+        "3": 1,
+        "4": 3,
+        "5": 91
+      },
+      "openai/gpt-3-5-turbo": {
+        "0": 0,
+        "1": 8,
+        "2": 1,
+        "3": 0,
+        "4": 2,
+        "5": 89
+      },
+      "openai/gpt-4-turbo": {
+        "0": 0,
+        "1": 5,
+        "2": 4,
+        "3": 2,
+        "4": 4,
+        "5": 85
+      }
     },
-    "openai/gpt-3-5-turbo": {
-      "0": 0,
-      "1": 6,
-      "2": 7,
-      "3": 0,
-      "4": 1,
-      "5": 86
+    "conversational-recall-2": {
+      "cohere/command": {
+        "0": 0,
+        "1": 15,
+        "2": 8,
+        "3": 2,
+        "4": 6,
+        "5": 69
+      },
+      "cohere/command-light": {
+        "0": 0,
+        "1": 13,
+        "2": 20,
+        "3": 5,
+        "4": 9,
+        "5": 53
+      },
+      "google/gemini-pro": {
+        "0": 0,
+        "1": 18,
+        "2": 18,
+        "3": 4,
+        "4": 5,
+        "5": 55
+      },
+      "maritaca/maritalk": {
+        "0": 0,
+        "1": 10,
+        "2": 6,
+        "3": 0,
+        "4": 1,
+        "5": 83
+      },
+      "mistral/medium": {
+        "0": 0,
+        "1": 2,
+        "2": 14,
+        "3": 5,
+        "4": 7,
+        "5": 72
+      },
+      "mistral/small": {
+        "0": 0,
+        "1": 9,
+        "2": 18,
+        "3": 1,
+        "4": 4,
+        "5": 68
+      },
+      "mistral/tiny": {
+        "0": 0,
+        "1": 2,
+        "2": 9,
+        "3": 2,
+        "4": 4,
+        "5": 83
+      },
+      "openai/gpt-3-5-turbo": {
+        "0": 0,
+        "1": 6,
+        "2": 7,
+        "3": 0,
+        "4": 1,
+        "5": 86
+      },
+      "openai/gpt-4-turbo": {
+        "0": 0,
+        "1": 6,
+        "2": 14,
+        "3": 3,
+        "4": 3,
+        "5": 74
+      }
     },
-    "openai/gpt-4-turbo": {
-      "0": 0,
-      "1": 6,
-      "2": 14,
-      "3": 3,
-      "4": 3,
-      "5": 74
-    }
-  },
-  "conversational-recall-3": {
-    "google/gemini-pro": {
-      "0": 1,
-      "1": 59,
-      "2": 20,
-      "3": 3,
-      "4": 3,
-      "5": 14
+    "conversational-recall-3": {
+      "cohere/command": {
+        "0": 0,
+        "1": 28,
+        "2": 16,
+        "3": 1,
+        "4": 0,
+        "5": 55
+      },
+      "cohere/command-light": {
+        "0": 0,
+        "1": 24,
+        "2": 27,
+        "3": 0,
+        "4": 5,
+        "5": 44
+      },
+      "google/gemini-pro": {
+        "0": 1,
+        "1": 59,
+        "2": 20,
+        "3": 3,
+        "4": 3,
+        "5": 14
+      },
+      "maritaca/maritalk": {
+        "0": 0,
+        "1": 19,
+        "2": 6,
+        "3": 2,
+        "4": 2,
+        "5": 71
+      },
+      "mistral/medium": {
+        "0": 0,
+        "1": 8,
+        "2": 4,
+        "3": 1,
+        "4": 3,
+        "5": 84
+      },
+      "mistral/small": {
+        "0": 0,
+        "1": 14,
+        "2": 17,
+        "3": 0,
+        "4": 10,
+        "5": 59
+      },
+      "mistral/tiny": {
+        "0": 0,
+        "1": 7,
+        "2": 17,
+        "3": 5,
+        "4": 8,
+        "5": 63
+      },
+      "openai/gpt-3-5-turbo": {
+        "0": 0,
+        "1": 9,
+        "2": 9,
+        "3": 1,
+        "4": 1,
+        "5": 80
+      },
+      "openai/gpt-4-turbo": {
+        "0": 0,
+        "1": 5,
+        "2": 5,
+        "3": 0,
+        "4": 1,
+        "5": 89
+      }
     },
-    "openai/gpt-3-5-turbo": {
-      "0": 0,
-      "1": 9,
-      "2": 9,
-      "3": 1,
-      "4": 1,
-      "5": 80
+    "conversational-recall-4": {
+      "cohere/command": {
+        "0": 0,
+        "1": 19,
+        "2": 15,
+        "3": 1,
+        "4": 1,
+        "5": 64
+      },
+      "cohere/command-light": {
+        "0": 0,
+        "1": 16,
+        "2": 18,
+        "3": 1,
+        "4": 5,
+        "5": 60
+      },
+      "google/gemini-pro": {
+        "0": 1,
+        "1": 47,
+        "2": 19,
+        "3": 4,
+        "4": 2,
+        "5": 27
+      },
+      "maritaca/maritalk": {
+        "0": 0,
+        "1": 18,
+        "2": 7,
+        "3": 0,
+        "4": 0,
+        "5": 75
+      },
+      "mistral/medium": {
+        "0": 0,
+        "1": 1,
+        "2": 10,
+        "3": 1,
+        "4": 5,
+        "5": 83
+      },
+      "mistral/small": {
+        "0": 0,
+        "1": 14,
+        "2": 16,
+        "3": 1,
+        "4": 3,
+        "5": 66
+      },
+      "mistral/tiny": {
+        "0": 0,
+        "1": 16,
+        "2": 14,
+        "3": 0,
+        "4": 6,
+        "5": 64
+      },
+      "openai/gpt-3-5-turbo": {
+        "0": 0,
+        "1": 7,
+        "2": 5,
+        "3": 0,
+        "4": 0,
+        "5": 88
+      },
+      "openai/gpt-4-turbo": {
+        "0": 0,
+        "1": 7,
+        "2": 1,
+        "3": 0,
+        "4": 2,
+        "5": 90
+      }
     },
-    "openai/gpt-4-turbo": {
-      "0": 0,
-      "1": 5,
-      "2": 5,
-      "3": 0,
-      "4": 1,
-      "5": 89
-    }
-  },
-  "conversational-recall-4": {
-    "google/gemini-pro": {
-      "0": 1,
-      "1": 47,
-      "2": 19,
-      "3": 4,
-      "4": 2,
-      "5": 27
+    "language-1": {
+      "cohere/command": {
+        "0": 2,
+        "1": 24,
+        "2": 0,
+        "3": 0,
+        "4": 0,
+        "5": 4
+      },
+      "cohere/command-light": {
+        "0": 0,
+        "1": 26,
+        "2": 0,
+        "3": 0,
+        "4": 0,
+        "5": 4
+      },
+      "google/gemini-pro": {
+        "0": 0,
+        "1": 0,
+        "2": 0,
+        "3": 0,
+        "4": 0,
+        "5": 30
+      },
+      "maritaca/maritalk": {
+        "0": 0,
+        "1": 10,
+        "2": 0,
+        "3": 0,
+        "4": 0,
+        "5": 20
+      },
+      "mistral/medium": {
+        "0": 0,
+        "1": 5,
+        "2": 0,
+        "3": 0,
+        "4": 0,
+        "5": 25
+      },
+      "mistral/small": {
+        "0": 0,
+        "1": 9,
+        "2": 0,
+        "3": 0,
+        "4": 0,
+        "5": 21
+      },
+      "mistral/tiny": {
+        "0": 0,
+        "1": 13,
+        "2": 0,
+        "3": 0,
+        "4": 0,
+        "5": 17
+      },
+      "openai/gpt-3-5-turbo": {
+        "0": 0,
+        "1": 0,
+        "2": 0,
+        "3": 0,
+        "4": 0,
+        "5": 30
+      },
+      "openai/gpt-4-turbo": {
+        "0": 0,
+        "1": 0,
+        "2": 0,
+        "3": 0,
+        "4": 0,
+        "5": 30
+      }
     },
-    "openai/gpt-3-5-turbo": {
-      "0": 0,
-      "1": 7,
-      "2": 5,
-      "3": 0,
-      "4": 0,
-      "5": 88
+    "tools-1": {
+      "google/gemini-pro": {
+        "0": 0,
+        "1": 5,
+        "2": 28,
+        "3": 4,
+        "4": 0,
+        "5": 63
+      },
+      "openai/gpt-3-5-turbo": {
+        "0": 0,
+        "1": 6,
+        "2": 7,
+        "3": 5,
+        "4": 11,
+        "5": 71
+      },
+      "openai/gpt-4-turbo": {
+        "0": 0,
+        "1": 1,
+        "2": 6,
+        "3": 5,
+        "4": 8,
+        "5": 80
+      }
     },
-    "openai/gpt-4-turbo": {
-      "0": 0,
-      "1": 7,
-      "2": 1,
-      "3": 0,
-      "4": 2,
-      "5": 90
-    }
-  },
-  "tools-1": {
-    "google/gemini-pro": {
-      "0": 0,
-      "1": 5,
-      "2": 28,
-      "3": 4,
-      "4": 0,
-      "5": 63
+    "tools-2": {
+      "google/gemini-pro": {
+        "0": 0,
+        "1": 7,
+        "2": 19,
+        "3": 7,
+        "4": 7,
+        "5": 60
+      },
+      "openai/gpt-3-5-turbo": {
+        "0": 0,
+        "1": 2,
+        "2": 10,
+        "3": 6,
+        "4": 6,
+        "5": 76
+      },
+      "openai/gpt-4-turbo": {
+        "0": 0,
+        "1": 1,
+        "2": 2,
+        "3": 4,
+        "4": 11,
+        "5": 82
+      }
     },
-    "openai/gpt-3-5-turbo": {
-      "0": 0,
-      "1": 6,
-      "2": 7,
-      "3": 5,
-      "4": 11,
-      "5": 71
+    "latency/CPS": {
+      "cohere/command": 163.21757869280657,
+      "cohere/command-light": 456.5673461790218,
+      "google/gemini-pro": 229.92897415762104,
+      "maritaca/maritalk": 98.14647261548764,
+      "mistral/medium": 113.4055023856577,
+      "mistral/small": 241.67334090570523,
+      "mistral/tiny": 360.76192652242423,
+      "openai/gpt-3-5-turbo": 342.14916878228337,
+      "openai/gpt-4-turbo": 61.28093383660563
     },
-    "openai/gpt-4-turbo": {
-      "0": 0,
-      "1": 1,
-      "2": 6,
-      "3": 5,
-      "4": 8,
-      "5": 80
-    }
-  },
-  "tools-2": {
-    "google/gemini-pro": {
-      "0": 0,
-      "1": 7,
-      "2": 19,
-      "3": 7,
-      "4": 7,
-      "5": 60
+    "stream/RTTFC": {
+      "cohere/command": 0.9434911450785896,
+      "cohere/command-light": 0.9041415990713004,
+      "google/gemini-pro": 0.0002454373188811587,
+      "maritaca/maritalk": 8.471633708623866e-05,
+      "mistral/medium": 0.8564018488231835,
+      "mistral/small": 0.76201555480228,
+      "mistral/tiny": 0.7051875681362151,
+      "openai/gpt-3-5-turbo": 0.7044780045981166,
+      "openai/gpt-4-turbo": 0.9330347651575066
     },
-    "openai/gpt-3-5-turbo": {
-      "0": 0,
-      "1": 2,
-      "2": 10,
-      "3": 6,
-      "4": 6,
-      "5": 76
+    "stream/ARTTTC": {
+      "cohere/command": 0.9907699734310926,
+      "cohere/command-light": 0.9839189987664683,
+      "google/gemini-pro": 0.5000959585493224,
+      "maritaca/maritalk": 0.5,
+      "mistral/medium": 0.9527703411241474,
+      "mistral/small": 0.9204767472140714,
+      "mistral/tiny": 0.8888898598359093,
+      "openai/gpt-3-5-turbo": 0.8972368672655315,
+      "openai/gpt-4-turbo": 0.9554306535208128
     },
-    "openai/gpt-4-turbo": {
-      "0": 0,
-      "1": 1,
-      "2": 2,
-      "3": 4,
-      "4": 11,
-      "5": 82
-    }
-  },
-  "consolidated": {
-    "google/gemini-pro": {
-      "0": 21,
-      "1": 784,
-      "2": 118,
-      "3": 23,
-      "4": 19,
-      "5": 1395
+    "stream/ACRTFO": {
+      "cohere/command": 0.9967937392296778,
+      "cohere/command-light": 0.995680259893427,
+      "google/gemini-pro": 0.8814300079005962,
+      "maritaca/maritalk": 0.5,
+      "mistral/medium": 0.9884482277961614,
+      "mistral/small": 0.978557366425176,
+      "mistral/tiny": 0.9686146815244011,
+      "openai/gpt-3-5-turbo": 0.9827845640540459,
+      "openai/gpt-4-turbo": 0.9904196535472758
     },
-    "openai/gpt-3-5-turbo": {
-      "0": 0,
-      "1": 676,
-      "2": 39,
-      "3": 12,
-      "4": 21,
-      "5": 1612
+    "pricing/input/usd/1M-tokens": {
+      "openai/gpt-4-turbo": 10.0,
+      "openai/gpt-3-5-turbo": 1.0,
+      "google/gemini-pro": 1.1250000000000002,
+      "mistral/tiny": 0.154784,
+      "mistral/small": 0.66336,
+      "mistral/medium": 2.764,
+      "cohere/command": 1.0,
+      "cohere/command-light": 0.3,
+      "maritaca/maritalk": 1.0285
     },
-    "openai/gpt-4-turbo": {
-      "0": 0,
-      "1": 273,
-      "2": 32,
-      "3": 14,
-      "4": 29,
-      "5": 2012
+    "pricing/output/usd/1M-tokens": {
+      "openai/gpt-4-turbo": 29.999999999999996,
+      "openai/gpt-3-5-turbo": 2.0,
+      "google/gemini-pro": 2.2500000000000004,
+      "mistral/tiny": 0.46435199999999993,
+      "mistral/small": 1.9900799999999996,
+      "mistral/medium": 8.292,
+      "cohere/command": 2.0,
+      "cohere/command-light": 0.6,
+      "maritaca/maritalk": 1.0285
+    },
+    "pricing/output/average-tokens": {
+      "cohere/command": 321.3910043783999,
+      "cohere/command-light": 280.0248381556348,
+      "google/gemini-pro": 237.63204362503245,
+      "maritaca/maritalk": 152.68458498023716,
+      "mistral/medium": 213.67509881422924,
+      "mistral/small": 190.58194993412386,
+      "mistral/tiny": 221.83715415019762,
+      "openai/gpt-3-5-turbo": 154.83607188703465,
+      "openai/gpt-4-turbo": 243.0214377406932
+    },
+    "pricing/output/average-USD-cost-10k-prompts": {
+      "cohere/command": 6.427820087567997,
+      "cohere/command-light": 1.6801490289338088,
+      "google/gemini-pro": 5.346720981563232,
+      "maritaca/maritalk": 1.5703609565217391,
+      "mistral/medium": 17.71793919367589,
+      "mistral/small": 3.792733269249011,
+      "mistral/tiny": 1.0301052620395255,
+      "openai/gpt-3-5-turbo": 3.096721437740693,
+      "openai/gpt-4-turbo": 72.90643132220795
     }
   },
   "percentage": {
+    "ENEM": {
+      "cohere/command": {
+        "failure": 250,
+        "success": 110,
+        "percentage": 0.3055555555555556
+      },
+      "cohere/command-light": {
+        "failure": 319,
+        "success": 41,
+        "percentage": 0.11388888888888889
+      },
+      "google/gemini-pro": {
+        "failure": 150,
+        "success": 210,
+        "percentage": 0.5833333333333334
+      },
+      "maritaca/maritalk": {
+        "failure": 157,
+        "success": 203,
+        "percentage": 0.5638888888888889
+      },
+      "mistral/medium": {
+        "failure": 120,
+        "success": 240,
+        "percentage": 0.6666666666666666
+      },
+      "mistral/small": {
+        "failure": 142,
+        "success": 218,
+        "percentage": 0.6055555555555555
+      },
+      "mistral/tiny": {
+        "failure": 197,
+        "success": 163,
+        "percentage": 0.4527777777777778
+      },
+      "openai/gpt-3-5-turbo": {
+        "failure": 128,
+        "success": 232,
+        "percentage": 0.6444444444444445
+      },
+      "openai/gpt-4-turbo": {
+        "failure": 40,
+        "success": 320,
+        "percentage": 0.8888888888888888
+      }
+    },
     "MMLU": {
+      "cohere/command": {
+        "failure": 857,
+        "success": 903,
+        "percentage": 0.5130681818181818
+      },
+      "cohere/command-light": {
+        "failure": 1076,
+        "success": 684,
+        "percentage": 0.3886363636363636
+      },
       "google/gemini-pro": {
         "failure": 634,
         "success": 1126,
         "percentage": 0.6397727272727273
+      },
+      "maritaca/maritalk": {
+        "failure": 696,
+        "success": 1064,
+        "percentage": 0.6045454545454545
+      },
+      "mistral/medium": {
+        "failure": 493,
+        "success": 1267,
+        "percentage": 0.7198863636363636
+      },
+      "mistral/small": {
+        "failure": 548,
+        "success": 1212,
+        "percentage": 0.6886363636363636
+      },
+      "mistral/tiny": {
+        "failure": 768,
+        "success": 992,
+        "percentage": 0.5636363636363636
       },
       "openai/gpt-3-5-turbo": {
         "failure": 638,
@@ -226,10 +758,40 @@
       }
     },
     "conversational-recall-1": {
+      "cohere/command": {
+        "failure": 26,
+        "success": 74,
+        "percentage": 0.74
+      },
+      "cohere/command-light": {
+        "failure": 31,
+        "success": 69,
+        "percentage": 0.69
+      },
       "google/gemini-pro": {
         "failure": 48,
         "success": 52,
         "percentage": 0.52
+      },
+      "maritaca/maritalk": {
+        "failure": 11,
+        "success": 89,
+        "percentage": 0.89
+      },
+      "mistral/medium": {
+        "failure": 13,
+        "success": 87,
+        "percentage": 0.87
+      },
+      "mistral/small": {
+        "failure": 23,
+        "success": 77,
+        "percentage": 0.77
+      },
+      "mistral/tiny": {
+        "failure": 6,
+        "success": 94,
+        "percentage": 0.94
       },
       "openai/gpt-3-5-turbo": {
         "failure": 9,
@@ -243,10 +805,40 @@
       }
     },
     "conversational-recall-2": {
+      "cohere/command": {
+        "failure": 25,
+        "success": 75,
+        "percentage": 0.75
+      },
+      "cohere/command-light": {
+        "failure": 38,
+        "success": 62,
+        "percentage": 0.62
+      },
       "google/gemini-pro": {
         "failure": 40,
         "success": 60,
         "percentage": 0.6
+      },
+      "maritaca/maritalk": {
+        "failure": 16,
+        "success": 84,
+        "percentage": 0.84
+      },
+      "mistral/medium": {
+        "failure": 21,
+        "success": 79,
+        "percentage": 0.79
+      },
+      "mistral/small": {
+        "failure": 28,
+        "success": 72,
+        "percentage": 0.72
+      },
+      "mistral/tiny": {
+        "failure": 13,
+        "success": 87,
+        "percentage": 0.87
       },
       "openai/gpt-3-5-turbo": {
         "failure": 13,
@@ -260,10 +852,40 @@
       }
     },
     "conversational-recall-3": {
+      "cohere/command": {
+        "failure": 45,
+        "success": 55,
+        "percentage": 0.55
+      },
+      "cohere/command-light": {
+        "failure": 51,
+        "success": 49,
+        "percentage": 0.49
+      },
       "google/gemini-pro": {
         "failure": 83,
         "success": 17,
         "percentage": 0.17
+      },
+      "maritaca/maritalk": {
+        "failure": 27,
+        "success": 73,
+        "percentage": 0.73
+      },
+      "mistral/medium": {
+        "failure": 13,
+        "success": 87,
+        "percentage": 0.87
+      },
+      "mistral/small": {
+        "failure": 31,
+        "success": 69,
+        "percentage": 0.69
+      },
+      "mistral/tiny": {
+        "failure": 29,
+        "success": 71,
+        "percentage": 0.71
       },
       "openai/gpt-3-5-turbo": {
         "failure": 19,
@@ -277,10 +899,40 @@
       }
     },
     "conversational-recall-4": {
+      "cohere/command": {
+        "failure": 35,
+        "success": 65,
+        "percentage": 0.65
+      },
+      "cohere/command-light": {
+        "failure": 35,
+        "success": 65,
+        "percentage": 0.65
+      },
       "google/gemini-pro": {
         "failure": 71,
         "success": 29,
         "percentage": 0.29
+      },
+      "maritaca/maritalk": {
+        "failure": 25,
+        "success": 75,
+        "percentage": 0.75
+      },
+      "mistral/medium": {
+        "failure": 12,
+        "success": 88,
+        "percentage": 0.88
+      },
+      "mistral/small": {
+        "failure": 31,
+        "success": 69,
+        "percentage": 0.69
+      },
+      "mistral/tiny": {
+        "failure": 30,
+        "success": 70,
+        "percentage": 0.7
       },
       "openai/gpt-3-5-turbo": {
         "failure": 12,
@@ -291,6 +943,53 @@
         "failure": 8,
         "success": 92,
         "percentage": 0.92
+      }
+    },
+    "language-1": {
+      "cohere/command": {
+        "failure": 26,
+        "success": 4,
+        "percentage": 0.13333333333333333
+      },
+      "cohere/command-light": {
+        "failure": 26,
+        "success": 4,
+        "percentage": 0.13333333333333333
+      },
+      "google/gemini-pro": {
+        "failure": 0,
+        "success": 30,
+        "percentage": 1.0
+      },
+      "maritaca/maritalk": {
+        "failure": 10,
+        "success": 20,
+        "percentage": 0.6666666666666666
+      },
+      "mistral/medium": {
+        "failure": 5,
+        "success": 25,
+        "percentage": 0.8333333333333334
+      },
+      "mistral/small": {
+        "failure": 9,
+        "success": 21,
+        "percentage": 0.7
+      },
+      "mistral/tiny": {
+        "failure": 13,
+        "success": 17,
+        "percentage": 0.5666666666666667
+      },
+      "openai/gpt-3-5-turbo": {
+        "failure": 0,
+        "success": 30,
+        "percentage": 1.0
+      },
+      "openai/gpt-4-turbo": {
+        "failure": 0,
+        "success": 30,
+        "percentage": 1.0
       }
     },
     "tools-1": {
@@ -308,6 +1007,18 @@
         "failure": 12,
         "success": 88,
         "percentage": 0.88
+      },
+      "cohere/command-light": {
+      },
+      "cohere/command": {
+      },
+      "maritaca/maritalk": {
+      },
+      "mistral/medium": {
+      },
+      "mistral/small": {
+      },
+      "mistral/tiny": {
       }
     },
     "tools-2": {
@@ -325,23 +1036,576 @@
         "failure": 7,
         "success": 93,
         "percentage": 0.93
+      },
+      "cohere/command-light": {
+      },
+      "cohere/command": {
+      },
+      "maritaca/maritalk": {
+      },
+      "mistral/medium": {
+      },
+      "mistral/small": {
+      },
+      "mistral/tiny": {
       }
     },
-    "consolidated": {
+    "latency/CPS": {
+      "cohere/command": {
+        "percentage": 0.3571500627851347
+      },
+      "cohere/command-light": {
+        "percentage": 0.9990532739147086
+      },
       "google/gemini-pro": {
-        "failure": 946,
-        "success": 1414,
-        "percentage": 0.5991525423728814
+        "percentage": 0.5031268581129563
+      },
+      "maritaca/maritalk": {
+        "percentage": 0.21476252213454625
+      },
+      "mistral/medium": {
+        "percentage": 0.24815208399487462
+      },
+      "mistral/small": {
+        "percentage": 0.5288256912597489
+      },
+      "mistral/tiny": {
+        "percentage": 0.7894134059571646
       },
       "openai/gpt-3-5-turbo": {
-        "failure": 727,
-        "success": 1633,
-        "percentage": 0.6919491525423729
+        "percentage": 0.7486852708583881
       },
       "openai/gpt-4-turbo": {
-        "failure": 319,
-        "success": 2041,
-        "percentage": 0.8648305084745763
+        "percentage": 0.1340939471260517
+      }
+    },
+    "stream/RTTFC": {
+      "cohere/command": {
+        "percentage": 0.9434911450785896
+      },
+      "cohere/command-light": {
+        "percentage": 0.9041415990713004
+      },
+      "google/gemini-pro": {
+        "percentage": 0.0002454373188811587
+      },
+      "maritaca/maritalk": {
+        "percentage": 8.471633708623866e-05
+      },
+      "mistral/medium": {
+        "percentage": 0.8564018488231835
+      },
+      "mistral/small": {
+        "percentage": 0.76201555480228
+      },
+      "mistral/tiny": {
+        "percentage": 0.7051875681362151
+      },
+      "openai/gpt-3-5-turbo": {
+        "percentage": 0.7044780045981166
+      },
+      "openai/gpt-4-turbo": {
+        "percentage": 0.9330347651575066
+      }
+    },
+    "stream/ARTTTC": {
+      "cohere/command": {
+        "percentage": 0.9907699734310926
+      },
+      "cohere/command-light": {
+        "percentage": 0.9839189987664683
+      },
+      "google/gemini-pro": {
+        "percentage": 0.5000959585493224
+      },
+      "maritaca/maritalk": {
+        "percentage": 0.5
+      },
+      "mistral/medium": {
+        "percentage": 0.9527703411241474
+      },
+      "mistral/small": {
+        "percentage": 0.9204767472140714
+      },
+      "mistral/tiny": {
+        "percentage": 0.8888898598359093
+      },
+      "openai/gpt-3-5-turbo": {
+        "percentage": 0.8972368672655315
+      },
+      "openai/gpt-4-turbo": {
+        "percentage": 0.9554306535208128
+      }
+    },
+    "stream/ACRTFO": {
+      "cohere/command": {
+        "percentage": 0.9967937392296778
+      },
+      "cohere/command-light": {
+        "percentage": 0.995680259893427
+      },
+      "google/gemini-pro": {
+        "percentage": 0.8814300079005962
+      },
+      "maritaca/maritalk": {
+        "percentage": 0.5
+      },
+      "mistral/medium": {
+        "percentage": 0.9884482277961614
+      },
+      "mistral/small": {
+        "percentage": 0.978557366425176
+      },
+      "mistral/tiny": {
+        "percentage": 0.9686146815244011
+      },
+      "openai/gpt-3-5-turbo": {
+        "percentage": 0.9827845640540459
+      },
+      "openai/gpt-4-turbo": {
+        "percentage": 0.9904196535472758
+      }
+    },
+    "pricing/input/usd/1M-tokens": {
+      "openai/gpt-4-turbo": {
+        "percentage": 0.0154784
+      },
+      "openai/gpt-3-5-turbo": {
+        "percentage": 0.154784
+      },
+      "google/gemini-pro": {
+        "percentage": 0.13758577777777775
+      },
+      "mistral/tiny": {
+        "percentage": 1.0
+      },
+      "mistral/small": {
+        "percentage": 0.23333333333333336
+      },
+      "mistral/medium": {
+        "percentage": 0.05600000000000001
+      },
+      "cohere/command": {
+        "percentage": 0.154784
+      },
+      "cohere/command-light": {
+        "percentage": 0.5159466666666667
+      },
+      "maritaca/maritalk": {
+        "percentage": 0.1504948954788527
+      }
+    },
+    "pricing/output/usd/1M-tokens": {
+      "openai/gpt-4-turbo": {
+        "percentage": 0.0154784
+      },
+      "openai/gpt-3-5-turbo": {
+        "percentage": 0.23217599999999997
+      },
+      "google/gemini-pro": {
+        "percentage": 0.2063786666666666
+      },
+      "mistral/tiny": {
+        "percentage": 1.0
+      },
+      "mistral/small": {
+        "percentage": 0.23333333333333334
+      },
+      "mistral/medium": {
+        "percentage": 0.055999999999999994
+      },
+      "cohere/command": {
+        "percentage": 0.23217599999999997
+      },
+      "cohere/command-light": {
+        "percentage": 0.7739199999999999
+      },
+      "maritaca/maritalk": {
+        "percentage": 0.45148468643655804
+      }
+    },
+    "pricing/output/average-tokens": {
+      "cohere/command": {
+        "percentage": 0.47507423325535625
+      },
+      "cohere/command-light": {
+        "percentage": 0.5452537210123364
+      },
+      "google/gemini-pro": {
+        "percentage": 0.6425252362899478
+      },
+      "maritaca/maritalk": {
+        "percentage": 1.0
+      },
+      "mistral/medium": {
+        "percentage": 0.7145642418210945
+      },
+      "mistral/small": {
+        "percentage": 0.8011492433203343
+      },
+      "mistral/tiny": {
+        "percentage": 0.6882732766976453
+      },
+      "openai/gpt-3-5-turbo": {
+        "percentage": 0.9861047436777706
+      },
+      "openai/gpt-4-turbo": {
+        "percentage": 0.6282761981811393
+      }
+    },
+    "pricing/output/average-USD-cost-10k-prompts": {
+      "cohere/command": {
+        "percentage": 0.16025732643510746
+      },
+      "cohere/command-light": {
+        "percentage": 0.6131035070699716
+      },
+      "google/gemini-pro": {
+        "percentage": 0.19266112175884506
+      },
+      "maritaca/maritalk": {
+        "percentage": 0.6559671887927923
+      },
+      "mistral/medium": {
+        "percentage": 0.0581391126123293
+      },
+      "mistral/small": {
+        "percentage": 0.2715997115830647
+      },
+      "mistral/tiny": {
+        "percentage": 1.0
+      },
+      "openai/gpt-3-5-turbo": {
+        "percentage": 0.33264382436383105
+      },
+      "openai/gpt-4-turbo": {
+        "percentage": 0.014129141193141162
+      }
+    }
+  },
+  "radar": {
+    "cohere/command-light": {
+      "tools": 0.0,
+      "bafc": 0.6125,
+      "language": 0.13333333333333333,
+      "mmlu": 0.3886363636363636,
+      "enem": 0.11388888888888889,
+      "stream": 0.9184179374477416,
+      "latency": 0.9990532739147086,
+      "pricing": 0.6354787012698454
+    },
+    "cohere/command": {
+      "tools": 0.0,
+      "bafc": 0.6725,
+      "language": 0.13333333333333333,
+      "mmlu": 0.5130681818181818,
+      "enem": 0.3055555555555556,
+      "stream": 0.9518729302872222,
+      "latency": 0.3571500627851347,
+      "pricing": 0.2249974589372398
+    },
+    "google/gemini-pro": {
+      "tools": 0.65,
+      "bafc": 0.395,
+      "language": 1.0,
+      "mmlu": 0.6397727272727273,
+      "enem": 0.5833333333333334,
+      "stream": 0.11533169496989419,
+      "latency": 0.5031268581129563,
+      "pricing": 0.2529788160967991
+    },
+    "maritaca/maritalk": {
+      "tools": 0.0,
+      "bafc": 0.8025,
+      "language": 0.6666666666666666,
+      "mmlu": 0.6045454545454545,
+      "enem": 0.5638888888888889,
+      "stream": 0.0834039302809052,
+      "latency": 0.21476252213454625,
+      "pricing": 0.5744808335329065
+    },
+    "mistral/medium": {
+      "tools": 0.0,
+      "bafc": 0.8525,
+      "language": 0.8333333333333334,
+      "mmlu": 0.7198863636363636,
+      "enem": 0.6666666666666666,
+      "stream": 0.8754364214293453,
+      "latency": 0.24815208399487462,
+      "pricing": 0.1509973685225832
+    },
+    "mistral/small": {
+      "tools": 0.0,
+      "bafc": 0.7175,
+      "language": 0.7,
+      "mmlu": 0.6886363636363636,
+      "enem": 0.6055555555555555,
+      "stream": 0.7932658051385039,
+      "latency": 0.5288256912597489,
+      "pricing": 0.3308497682956469
+    },
+    "mistral/tiny": {
+      "tools": 0.0,
+      "bafc": 0.8049999999999999,
+      "language": 0.5666666666666667,
+      "mmlu": 0.5636363636363636,
+      "enem": 0.4527777777777778,
+      "stream": 0.7424483518935384,
+      "latency": 0.7894134059571646,
+      "pricing": 0.9554676109568064
+    },
+    "openai/gpt-3-5-turbo": {
+      "tools": 0.82,
+      "bafc": 0.8675,
+      "language": 1.0,
+      "mmlu": 0.6375,
+      "enem": 0.6444444444444445,
+      "stream": 0.7437334564417286,
+      "latency": 0.7486852708583881,
+      "pricing": 0.37188174525275197
+    },
+    "openai/gpt-4-turbo": {
+      "tools": 0.905,
+      "bafc": 0.87,
+      "language": 1.0,
+      "mmlu": 0.8590909090909091,
+      "enem": 0.8888888888888888,
+      "stream": 0.9396831632202628,
+      "latency": 0.1340939471260517,
+      "pricing": 0.10244268882293754
+    }
+  },
+  "consolidated": {
+    "tools": {
+      "cohere/command-light": {
+        "percentage": 0.0
+      },
+      "cohere/command": {
+        "percentage": 0.0
+      },
+      "google/gemini-pro": {
+        "percentage": 0.65
+      },
+      "maritaca/maritalk": {
+        "percentage": 0.0
+      },
+      "mistral/medium": {
+        "percentage": 0.0
+      },
+      "mistral/small": {
+        "percentage": 0.0
+      },
+      "mistral/tiny": {
+        "percentage": 0.0
+      },
+      "openai/gpt-3-5-turbo": {
+        "percentage": 0.82
+      },
+      "openai/gpt-4-turbo": {
+        "percentage": 0.905
+      }
+    },
+    "bafc": {
+      "cohere/command-light": {
+        "percentage": 0.6125
+      },
+      "cohere/command": {
+        "percentage": 0.6725
+      },
+      "google/gemini-pro": {
+        "percentage": 0.395
+      },
+      "maritaca/maritalk": {
+        "percentage": 0.8025
+      },
+      "mistral/medium": {
+        "percentage": 0.8525
+      },
+      "mistral/small": {
+        "percentage": 0.7175
+      },
+      "mistral/tiny": {
+        "percentage": 0.8049999999999999
+      },
+      "openai/gpt-3-5-turbo": {
+        "percentage": 0.8675
+      },
+      "openai/gpt-4-turbo": {
+        "percentage": 0.87
+      }
+    },
+    "language": {
+      "cohere/command-light": {
+        "percentage": 0.13333333333333333
+      },
+      "cohere/command": {
+        "percentage": 0.13333333333333333
+      },
+      "google/gemini-pro": {
+        "percentage": 1.0
+      },
+      "maritaca/maritalk": {
+        "percentage": 0.6666666666666666
+      },
+      "mistral/medium": {
+        "percentage": 0.8333333333333334
+      },
+      "mistral/small": {
+        "percentage": 0.7
+      },
+      "mistral/tiny": {
+        "percentage": 0.5666666666666667
+      },
+      "openai/gpt-3-5-turbo": {
+        "percentage": 1.0
+      },
+      "openai/gpt-4-turbo": {
+        "percentage": 1.0
+      }
+    },
+    "mmlu": {
+      "cohere/command-light": {
+        "percentage": 0.3886363636363636
+      },
+      "cohere/command": {
+        "percentage": 0.5130681818181818
+      },
+      "google/gemini-pro": {
+        "percentage": 0.6397727272727273
+      },
+      "maritaca/maritalk": {
+        "percentage": 0.6045454545454545
+      },
+      "mistral/medium": {
+        "percentage": 0.7198863636363636
+      },
+      "mistral/small": {
+        "percentage": 0.6886363636363636
+      },
+      "mistral/tiny": {
+        "percentage": 0.5636363636363636
+      },
+      "openai/gpt-3-5-turbo": {
+        "percentage": 0.6375
+      },
+      "openai/gpt-4-turbo": {
+        "percentage": 0.8590909090909091
+      }
+    },
+    "enem": {
+      "cohere/command-light": {
+        "percentage": 0.11388888888888889
+      },
+      "cohere/command": {
+        "percentage": 0.3055555555555556
+      },
+      "google/gemini-pro": {
+        "percentage": 0.5833333333333334
+      },
+      "maritaca/maritalk": {
+        "percentage": 0.5638888888888889
+      },
+      "mistral/medium": {
+        "percentage": 0.6666666666666666
+      },
+      "mistral/small": {
+        "percentage": 0.6055555555555555
+      },
+      "mistral/tiny": {
+        "percentage": 0.4527777777777778
+      },
+      "openai/gpt-3-5-turbo": {
+        "percentage": 0.6444444444444445
+      },
+      "openai/gpt-4-turbo": {
+        "percentage": 0.8888888888888888
+      }
+    },
+    "stream": {
+      "cohere/command-light": {
+        "percentage": 0.9184179374477416
+      },
+      "cohere/command": {
+        "percentage": 0.9518729302872222
+      },
+      "google/gemini-pro": {
+        "percentage": 0.11533169496989419
+      },
+      "maritaca/maritalk": {
+        "percentage": 0.0834039302809052
+      },
+      "mistral/medium": {
+        "percentage": 0.8754364214293453
+      },
+      "mistral/small": {
+        "percentage": 0.7932658051385039
+      },
+      "mistral/tiny": {
+        "percentage": 0.7424483518935384
+      },
+      "openai/gpt-3-5-turbo": {
+        "percentage": 0.7437334564417286
+      },
+      "openai/gpt-4-turbo": {
+        "percentage": 0.9396831632202628
+      }
+    },
+    "latency": {
+      "cohere/command-light": {
+        "percentage": 0.9990532739147086
+      },
+      "cohere/command": {
+        "percentage": 0.3571500627851347
+      },
+      "google/gemini-pro": {
+        "percentage": 0.5031268581129563
+      },
+      "maritaca/maritalk": {
+        "percentage": 0.21476252213454625
+      },
+      "mistral/medium": {
+        "percentage": 0.24815208399487462
+      },
+      "mistral/small": {
+        "percentage": 0.5288256912597489
+      },
+      "mistral/tiny": {
+        "percentage": 0.7894134059571646
+      },
+      "openai/gpt-3-5-turbo": {
+        "percentage": 0.7486852708583881
+      },
+      "openai/gpt-4-turbo": {
+        "percentage": 0.1340939471260517
+      }
+    },
+    "pricing": {
+      "cohere/command-light": {
+        "percentage": 0.6354787012698454
+      },
+      "cohere/command": {
+        "percentage": 0.2249974589372398
+      },
+      "google/gemini-pro": {
+        "percentage": 0.2529788160967991
+      },
+      "maritaca/maritalk": {
+        "percentage": 0.5744808335329065
+      },
+      "mistral/medium": {
+        "percentage": 0.1509973685225832
+      },
+      "mistral/small": {
+        "percentage": 0.3308497682956469
+      },
+      "mistral/tiny": {
+        "percentage": 0.9554676109568064
+      },
+      "openai/gpt-3-5-turbo": {
+        "percentage": 0.37188174525275197
+      },
+      "openai/gpt-4-turbo": {
+        "percentage": 0.10244268882293754
       }
     }
   }

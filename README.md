@@ -1,15 +1,16 @@
 # LBPE Score
 
-This repository contains the source code used to evaluate and generate results for the LBPE Score. It also provides replication for the MMLU test.
+This repository contains the source code used to evaluate and generate results for the LBPE Score. It also provides replication for the MMLU test and the ENEM test.
 
 You can read more about this in the article on Medium:
 - [_Gemini claims superiority over ChatGPT: I tried to replicate their findings_](https://medium.com/@gbaptista/gemini-claims-superiority-over-chatgpt-i-tried-to-replicate-their-findings-9751b31394b1?source=friends_link&sk=bb14b49af16b977a82fa9cfb81bf7840)
 
-Detailed charts with results: https://gbaptista.github.io/lbpe-score/
+Detailed charts with results for the Report version 1.0.0: https://gbaptista.github.io/lbpe-score/
 
 - [Setup](#setup)
 - [Usage](#usage)
     - [MMLU](#mmlu)
+    - [ENEM](#enem)
 - [Disclaimer and Warning](#disclaimer-and-warning)
 - [Development](#development)
     - [Charts](#charts)
@@ -85,6 +86,7 @@ Get the necessary data from the repository [`lbpe-score-data`](https://github.co
 ./lbpe generate conversational-recall-2 10 100
 ./lbpe generate conversational-recall-3 10 100
 ./lbpe generate conversational-recall-4 10 100
+./lbpe generate language-1 10 30
 ./lbpe generate tools-1 10 100
 ./lbpe generate tools-2 10 100
 
@@ -93,8 +95,12 @@ Get the necessary data from the repository [`lbpe-score-data`](https://github.co
 ./lbpe eval standard conversational-recall-2
 ./lbpe eval standard conversational-recall-3
 ./lbpe eval standard conversational-recall-4
+./lbpe eval standard language-1
 ./lbpe eval tools tools-1
 ./lbpe eval tools tools-2
+
+# Evaluate the latency and streaming capabilities:
+./lbpe eval standard latency-streaming
 
 # Score the evaluations:
 ./lbpe score
@@ -114,11 +120,20 @@ To ensure scientific rigor, if you change any character in your cartridges or da
 ./lbpe report
 ```
 
+### ENEM
+
+```sh
+./lbpe generate ENEM
+./lbpe eval standard ENEM
+./lbpe score
+./lbpe report
+```
+
 ## Disclaimer and Warning
 
 To ensure scientific rigor, if you change any character in your cartridges or datasets, you will be required to run evaluations related to them again. Therefore, be cautious with changes; ensure the readiness of the datasets and cartridges before starting to spend money on generating samples and evaluations.
 
-Keep in mind that running these benchmarks can be costly; we are talking about expenses ranging from $30 to $500, depending on how you iterate on it. Be careful and monitor your costs closely. The authors assume no responsibility for any damage or costs that may arise from the use of this project.
+Keep in mind that running these benchmarks can be costly; we are talking about expenses ranging from $10 to $1,000, depending on how you iterate on it. Be careful and monitor your costs closely. The authors assume no responsibility for any damage or costs that may arise from the use of this project.
 
 ## Development
 

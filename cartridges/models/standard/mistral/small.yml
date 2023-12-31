@@ -1,0 +1,20 @@
+---
+meta:
+  symbol: 🟠
+  name: Small
+  author: gbaptista
+  version: 1.0.0
+  license: MIT
+  description: Mitral's Small model through Mistral Platform API.
+
+interfaces:
+  eval:
+    output:
+      suffix: ''
+
+provider:
+  id: mistral
+  credentials:
+    api-key: ENV/MISTRAL_API_KEY
+  settings:
+    model: mistral-small

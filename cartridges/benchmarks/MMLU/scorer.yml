@@ -1,11 +1,11 @@
 ---
 meta:
   symbol: 🧮
-  name: Calculator Tool Usage Scorer
+  name: MMLU Scorer
   author: gbaptista
   version: 1.0.0
   license: MIT
-  description: Evaluate and score the effectiveness of AI models in using a calculator tool for solving mathematical problems, including the decision to use the tool.
+  description: Evaluate and score the effectiveness of AI models in answering MMLU questions.
 
 behaviors:
   interaction:

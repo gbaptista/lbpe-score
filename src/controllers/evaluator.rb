@@ -17,6 +17,14 @@ module LBPE
 
         samples = if sample_path.nil?
                     if benchmark == 'MMLU'
+                      items = Dir["data/datasets/#{benchmark}-*/*.yml"].count
+                      raise "Unexpected number of items for MMLU: #{items}" if items != 1760
+
+                      Dir["data/datasets/#{benchmark}-*/*.yml"].map(&:to_s)
+                    elsif benchmark == 'ENEM'
+                      items = Dir["data/datasets/#{benchmark}-*/*.yml"].count
+                      raise "Unexpected number of items for ENEM: #{items}" if items != 360
+
                       Dir["data/datasets/#{benchmark}-*/*.yml"].map(&:to_s)
                     else
                       Dir["data/datasets/#{benchmark}/*.yml"].map(&:to_s)
@@ -25,8 +33,8 @@ module LBPE
                     [sample_path]
                   end
 
-        samples.each do |sample|
-          models.each do |model|
+        samples.shuffle.each do |sample|
+          models.shuffle.each do |model|
             evaluate_model(sample.split('/')[-2], model, sample)
           end
         end

@@ -8,6 +8,12 @@ require_relative 'printer'
 module LBPE
   module Logic
     module Identifier
+      def self.cartridge_with_prompt(cartridge_path, prompt)
+        cartridge_raw = cartridge(cartridge_path, as_raw: true)
+
+        Digest::SHA256.hexdigest("#{YAML.dump(cartridge_raw)}@#{YAML.dump(prompt)}")
+      end
+
       def self.cartridge_with_sample(cartridge_path, sample_path)
         cartridge_raw = cartridge(cartridge_path, as_raw: true)
         sample_raw = sample(sample_path, as_raw: true)
