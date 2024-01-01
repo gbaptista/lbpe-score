@@ -13,11 +13,11 @@
         <li>
           Stories
           <ul>
-            <!-- <li>
-              <a href="#TODO" target="_blank">
+            <li>
+              <a href="https://medium.com/@gbaptista/lbpe-score-a-new-perspective-for-evaluating-ai-llms-48ac6f537849?source=friends_link&sk=c337c9f34557bbbb66ce510a0f40e19c" target="_blank">
                 <em>LBPE Score: A New Perspective for Evaluating AI LLMs</em>
               </a>
-            </li> -->
+            </li>
             <li>
               <a href="https://medium.com/@gbaptista/gemini-claims-superiority-over-chatgpt-i-tried-to-replicate-their-findings-9751b31394b1?source=friends_link&sk=bb14b49af16b977a82fa9cfb81bf7840" target="_blank">
                 <em>Gemini claims superiority over ChatGPT: I tried to replicate their findings</em>
@@ -187,7 +187,7 @@
         <h3>BaFC B</h3>
         
         <p>
-          Back-and-forth conversations: One piece of information is provided, followed by a question about it. The information provided avoids personal data or common knowledge, forcing the model to reason and removing privacy concerns.
+          Back-and-forth conversations: One piece of information is provided, followed by a question about it. The information avoids personal data or common knowledge, forcing the model to reason and removing privacy concerns.
         </p>
 
         <div class="percentage">
@@ -203,7 +203,7 @@
         <h3>BaFC C</h3>
         
         <p>
-          Back-and-forth conversations: The first message gives several details; the following 2 messages changes the subject, which might ‘confuse’ the model, and then a question about the first message is asked.
+          Back-and-forth conversations: The first message gives several details; the following 2 messages change the subject, which might "confuse" the model, and then a question about the first message is asked.
         </p>
 
         <div class="percentage">
@@ -219,7 +219,7 @@
         <h3>BaFC D</h3>
         
         <p>
-          Back-and-forth conversations: The first message gives several details; the following 2 messages changes the subject, which might ‘confuse’ the model, and then a question about the first message is asked. The information provided avoids personal data or common knowledge, forcing the model to reason and removing privacy concerns.
+          Back-and-forth conversations: The first message gives several details; the following 2 messages change the subject, which might "confuse" the model, and then a question about the first message is asked. The information avoids personal data or common knowledge, forcing the model to reason and removing privacy concerns.
         </p>
 
         <div class="percentage">
@@ -247,7 +247,7 @@
         <h3>Tools A</h3>
         
         <p>
-          Straightforward math questions that could use a calculator.
+          These are straightforward math questions that could use a calculator.
         </p>
 
         <div class="percentage">
@@ -263,7 +263,7 @@
         <h3>Tools B</h3>
         
         <p>
-          Implied math questions; the possible need for a calculator must be inferred.
+          Implied math questions: the possible need for a calculator must be inferred.
         </p>
 
         <div class="percentage">
@@ -295,7 +295,7 @@
         <h2>Streaming</h2>
 
         <p>
-          Weighted average, where RTTFC has 10 times more weight than ARTTTC and ACRTFO.
+          A weighted average, where RTTFC has 10 times more weight than ARTTTC and ACRTFO.
         </p>
 
         <div class="percentage">
@@ -307,7 +307,7 @@
         <h3>RTTFC</h3>
         
         <p>
-          How fast was the first character received compared to the total request time? If the first character is received rapidly relative to the request's total duration, it indicates efficient streaming. Conversely, very long durations suggest an absence of streaming.
+          How fast was the first character received compared to the total request time? If the first character is received rapidly relative to the request's entire duration, it indicates efficient streaming. Conversely, very long durations suggest an absence of streaming.
         </p>
 
         <div class="percentage">
@@ -319,7 +319,7 @@
         <h3>ARTTTC</h3>
         
         <p>
-          Average speed for the slowest 10% of streaming events compared to the total request duration. High numbers mean that the mode delivers partial characters at a high speed, creating the feeling of "live typing." A low number can cause the model to appear as though it "freezes."
+          Average speed for the slowest 10% of streaming events compared to the total request duration. High numbers mean that the mode delivers partial characters at high speed, creating the feeling of "live typing." A low number can cause the model to appear like it "freezes."
         </p>
 
         <div class="percentage">
@@ -331,8 +331,7 @@
         <h3>ACRTFO</h3>
         
         <p>
-          Average characters per stream event compared to final output characters count.
-          Models with a higher number produce text more quickly, simulating "live typing". High ACRTFO scores are irrelevant if RTTFC and ARTTTC are low: receiving 10 stream events after a 5-second delay don't create the feeling of streaming at all.
+          Average characters per stream event compared to final output characters count. Models with a higher number produce text more quickly, simulating "live typing." High ACRTFO scores are irrelevant if RTTFC and ARTTTC are low: receiving 10 stream events after a 5-second delay doesn't create the feeling of streaming.
         </p>
 
         <div class="percentage">
@@ -380,7 +379,7 @@
         <h3>Input: USD / 1M tokens</h3>
         
         <p>
-          Input pricing normalized to USD and number of tokens. The lower the price, the higher the percentage score the model has in Cost Efficiency.
+          Input pricing is normalized to USD and the number of tokens. The lower the price, the higher the percentage score the model has in Cost Efficiency.
         </p>
 
         <div class="percentage">
@@ -396,7 +395,7 @@
         <h3>Output: USD / 1M tokens</h3>
         
         <p>
-          Output pricing normalized to USD and number of tokens. The lower the price, the higher the percentage score the model has in Cost Efficiency.
+          Output pricing is normalized to USD and the number of tokens. The lower the price, the higher the percentage score the model has in Cost Efficiency.
         </p>
 
         <div class="percentage">
@@ -477,11 +476,11 @@
         <li>
           Stories
           <ul>
-            <!-- <li>
-              <a href="#TODO" target="_blank">
+            <li>
+              <a href="https://medium.com/@gbaptista/lbpe-score-a-new-perspective-for-evaluating-ai-llms-48ac6f537849?source=friends_link&sk=c337c9f34557bbbb66ce510a0f40e19c" target="_blank">
                 <em>LBPE Score: A New Perspective for Evaluating AI LLMs</em>
               </a>
-            </li> -->
+            </li>
             <li>
               <a href="https://medium.com/@gbaptista/gemini-claims-superiority-over-chatgpt-i-tried-to-replicate-their-findings-9751b31394b1?source=friends_link&sk=bb14b49af16b977a82fa9cfb81bf7840" target="_blank">
                 <em>Gemini claims superiority over ChatGPT: I tried to replicate their findings</em>

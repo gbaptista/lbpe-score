@@ -3,6 +3,7 @@
 This repository contains the source code used to evaluate and generate results for the LBPE Score. It also provides replication for the MMLU test and the ENEM test.
 
 You can read more about this in the article on Medium:
+- [_LBPE Score: A New Perspective for Evaluating AI LLMs_](https://medium.com/@gbaptista/lbpe-score-a-new-perspective-for-evaluating-ai-llms-48ac6f537849?source=friends_link&sk=c337c9f34557bbbb66ce510a0f40e19c)
 - [_Gemini claims superiority over ChatGPT: I tried to replicate their findings_](https://medium.com/@gbaptista/gemini-claims-superiority-over-chatgpt-i-tried-to-replicate-their-findings-9751b31394b1?source=friends_link&sk=bb14b49af16b977a82fa9cfb81bf7840)
 
 Detailed charts with results for the Report version 1.0.0: https://gbaptista.github.io/lbpe-score/
@@ -47,11 +48,15 @@ nb cartridges/models/standard/google/gemini-pro.yml - eval "Hi."
 ```yaml
 ---
 project: LBPE Score
-version: 0.0.1
+version: 1.0.0
 nano-bots:
-  version: 2.2.0
-  specification: 2.0.1
+  version: 2.4.1
+  specification: 2.2.0
 github: https://github.com/gbaptista/lbpe-score
+report:
+  version: 1.0.0
+  url: https://gbaptista.github.io/lbpe-score/
+  data: https://github.com/gbaptista/lbpe-score-data
 ```
 
 Get the necessary data from the repository [`lbpe-score-data`](https://github.com/gbaptista/lbpe-score-data).
@@ -107,6 +112,9 @@ Get the necessary data from the repository [`lbpe-score-data`](https://github.co
 
 # Generate final report:
 ./lbpe report
+
+# Generate CSV with scores:
+./lbpe csv
 ```
 
 To ensure scientific rigor, if you change any character in your cartridges or datasets, you will be required to run evaluations related to them again. Therefore, be cautious with changes; ensure the readiness of the datasets and cartridges before starting to spend money on generating samples and evaluations.
@@ -114,7 +122,7 @@ To ensure scientific rigor, if you change any character in your cartridges or da
 ### MMLU
 
 ```sh
-./lbpe generate MMLU dev # dev test val
+./lbpe generate MMLU test # dev test val
 ./lbpe eval standard MMLU
 ./lbpe score
 ./lbpe report
