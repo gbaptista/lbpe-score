@@ -2,7 +2,7 @@
 
 This repository contains the source code used to evaluate and generate results for the LBPE Score. It also provides replication for the MMLU test and the ENEM test.
 
-You can read more about this in the article on Medium:
+You can read more about this in these Medium stories:
 - [_LBPE Score: A New Perspective for Evaluating AI LLMs_](https://medium.com/@gbaptista/lbpe-score-a-new-perspective-for-evaluating-ai-llms-48ac6f537849?source=friends_link&sk=c337c9f34557bbbb66ce510a0f40e19c)
 - [_Gemini claims superiority over ChatGPT: I tried to replicate their findings_](https://medium.com/@gbaptista/gemini-claims-superiority-over-chatgpt-i-tried-to-replicate-their-findings-9751b31394b1?source=friends_link&sk=bb14b49af16b977a82fa9cfb81bf7840)
 
